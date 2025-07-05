@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Ads - Digital Market Tap</title>
+  <link rel="icon" type="image/svg+xml" href="./assests/images/dmt-favicon.png" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Swiper & AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary: #f89e1b;
+      --secondary: #8E81FA;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .underline-animate {
+      position: relative;
+      display: inline-block;
+    }
+
+    .underline-animate::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: currentColor;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .underline-animate:hover::after {
+      width: 100%;
+    }
+
+    input.border-red-500,
+    textarea.border-red-500 {
+      border-width: 2px;
+    }
+
+    .blob {
+      position: absolute;
+      z-index: 0;
+      opacity: 0.15;
+    }
+
+    .blob-animate {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+  </style>
+</head>
+<body class="!bg-gradient-to-b from-[#fff7ee] to-[#FFFFFF] font-sans antialiased text-gray-800 relative">
+
+  <!-- Header -->
+ <header class="bg-[#fff7ee] px-6 md:px-12 lg:px-28 pb-2 flex items-center sticky top-0 z-50 shadow">
+  <div class="flex items-center space-x-3">
+    <img src="./assests/images/dmt-main-logo.png" alt="Digital Market Tap Logo" class="h-20" />
+  </div>
+
+  <div class="ml-auto flex space-x-4">
+    <a href="#contact" class="hidden md:inline-block text-[#f89e1b] px-4 py-2 rounded-lg text-sm font-semibold transition">
+      <span class="underline-animate">Contact Us</span>
+    </a>
+    <a href="#contact" class="hidden md:inline-block text-[#f89e1b] px-4 py-2 rounded-lg text-sm font-semibold transition">
+      <span class="underline-animate">Contact Us</span>
+    </a>
+  </div>
+</header>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden">
+    <!-- Decorative Blob -->
+    <svg class="blob w-32 h-32 top-10 left-10 blob-animate" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="fill: var(--primary);">
+      <path d="M53.1,-63.1C68.7,-51.9,80.4,-34.6,81.4,-17.2C82.3,0.3,72.6,17.9,61.4,30.6C50.2,43.3,37.4,51,23.7,59.1C10,67.2,-4.5,75.7,-21.1,75.3C-37.7,75,-56.5,65.7,-65.3,50.1C-74.1,34.6,-72.9,12.9,-67.8,-6.8C-62.7,-26.6,-53.7,-44.4,-39.6,-55.6C-25.6,-66.7,-6.4,-71.2,11.6,-74.3C29.6,-77.3,47.5,-79.3,53.1,-63.1Z" transform="translate(100 100)" />
+    </svg>
+
+    <div class="swiper myHeroSwiper h-[500px]">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide bg-[url('./assests/images/blogImg8.jpg')] bg-cover bg-center text-white flex items-center justify-center">
+          <div class="text-center px-5 md:px-20">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Grow Your Business with Google Ads</h1>
+            <p class="text-lg mb-6">Get instant visibility, drive more traffic, and convert leads with our expert Google Ads services.</p>
+            <a href="#contact" class="bg-[#f89e1b] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#8E81FA] transition">Get Free Audit</a>
+          </div>
+        </div>
+        <div class="swiper-slide bg-[url('./assests/images/blogImg8.jpg')] bg-cover bg-center text-white flex items-center justify-center">
+          <div class="text-center px-5 md:px-20">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Instant Results with Paid Campaigns</h1>
+            <p class="text-lg mb-6">Run smart Google Ads campaigns designed to scale fast and convert better.</p>
+            <a href="#services" class="bg-[#8E81FA] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#f89e1b] transition">Explore Services</a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+<div class="px-6 pt-12 pb-16 md:px-12 lg:px-28 bg-white">
+  <h2 class="text-center text-3xl md:text-5xl font-bold text-[#111827] mb-8">
+    Award-Winning <br> Digital Marketing Agency
+  </h2>
+  <p class="text-center text-lg text-gray-600 mb-8">
+    Internationally recognized and a national award winner, offering an impeccable blend of technology and brand growth services for varied industries.
+  </p>
+
+  <div class="bg-white shadow-md rounded-xl pl-10 pr-2 py-12 flex flex-col md:flex-row items-center md:justify-between gap-6">
+    <!-- Left Text -->
+    <div class="text-center md:text-left pr-8 h-full border-r-2 border-gray-700">
+      <p class="text-xl font-medium text-gray-800">Trusted By<br />Businesses<br />Globally</p>
+    </div>
+
+    <!-- Scrolling Logos -->
+    <div class="relative overflow-hidden">
+      <div class="flex animate-marquee whitespace-nowrap gap-12">
+        <img src="./assests/images/trust-img1.webp" alt="India 500" class="h-[70px] object-contain" />
+        <img src="./assests/images/trust-img2.webp" alt="Clutch" class="h-[70px] object-contain" />
+        <img src="./assests/images/trust-img3.webp" alt="Upwork" class="h-[70px] object-contain" />
+        <img src="./assests/images/trust-img4.webp" alt="ET" class="h-[70px] object-contain" />
+        <img src="./assests/images/trust-img5.webp" alt="GoodFirms" class="h-[70px] object-contain" />
+        <img src="./assests/images/The-Economic-Times.webp" alt="ET Growth" class="h-[70px] object-contain" />
+
+        <!-- duplicate set for smooth loop -->
+        <img src="./assests/images/trust-img1.webp" alt="India 500" class="h-[70px] object-contain" />
+        <img src="./assests/images/trust-img2.webp" alt="Clutch" class="h-[70px] object-contain" />
+        <img src="./assests/images/trust-img3.webp" alt="Upwork" class="h-[70px] object-contain" />
+        <img src="./assests/images/trust-img4.webp" alt="ET" class="h-[70px] object-contain" />
+        <img src="./assests/images/trust-img5.webp" alt="GoodFirms" class="h-[70px] object-contain" />
+        <img src="./assests/images/The-Economic-Times.webp" alt="ET Growth" class="h-[70px] object-contain" />
+      </div>
+    </div>
+  </div>
+  <div class="flex justify-center p-8">
+  <a href="#contact" class="bg-[#f89e1b] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#8E81FA] transition">
+    Get Free Audit
+  </a>
+</div>
+
+</div>
+
+
+
+  <!-- Services Section -->
+  <section id="services" class="relative py-20 px-5 md:px-20 bg-white text-center" data-aos="fade-up">
+    <!-- Decorative Star -->
+    <svg class="blob w-16 h-16 bottom-10 right-10 blob-animate" viewBox="0 0 24 24" fill="none" style="fill: var(--secondary); position: absolute;">
+      <path d="M12 2L14.09 8.26L20.97 8.63L15.97 12.97L17.58 19.72L12 15.77L6.42 19.72L8.03 12.97L3.03 8.63L9.91 8.26L12 2Z"/>
+    </svg>
+    <h2 class="text-3xl font-bold mb-12 text-[#f89e1b] uppercase">Our Best Services</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="p-6 border rounded-xl hover:shadow-lg"> <h3 class="text-xl font-semibold mb-2">Search Ads</h3> <p class="text-gray-600">Appear on top of search results and get more leads instantly.</p> </div>
+      <div class="p-6 border rounded-xl hover:shadow-lg"> <h3 class="text-xl font-semibold mb-2">Display Ads</h3> <p class="text-gray-600">Reach wider audience across Google Display Network.</p> </div>
+      <div class="p-6 border rounded-xl hover:shadow-lg"> <h3 class="text-xl font-semibold mb-2">Shopping Ads</h3> <p class="text-gray-600">Promote your eCommerce products and drive more sales.</p> </div>
+      <div class="p-6 border rounded-xl hover:shadow-lg"> <h3 class="text-xl font-semibold mb-2">Video Ads</h3> <p class="text-gray-600">Run targeted ads on YouTube and other video platforms.</p> </div>
+    </div>
+  </section>
+
+  <div class="max-w-7xl mx-auto px-4 py-16">
+  <!-- Title & Description -->
+  <div class="text-center md:text-left md:flex justify-between items-start mb-12">
+    <div class="md:w-1/2">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+        With Webskitters You Get ROI-Driven Digital Marketing Solutions
+      </h2>
+    </div>
+    <div class="md:w-1/2 mt-6 md:mt-0 text-gray-600">
+      <p>
+        At Webskitters, We Craft Tailored Digital Marketing Strategies Based On
+        Data And Focused On Results. You Get Campaigns That Align With Your
+        Goals, Not Guesswork. We Analyze, Optimize, And Adapt Continuously.
+        You Can Expect Measurable Returns, Not Vague Promises. Let Our
+        Experts Help You Stand Out In A Congested Online Market.
+      </p>
+    </div>
+  </div>
+
+  <!-- Service Cards -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Card1 -->
+    <div class="flex items-center justify-between p-6 border rounded-xl hover:shadow-md transition">
+      <div class="flex items-center space-x-4">
+        <div class="bg-white p-3 rounded-full shadow-md">
+          <img src="./assests/images/digital-marketing-digital-icon1.svg" alt="SEO" class="w-8 h-8" />
+        </div>
+        <p class="text-lg font-medium text-gray-800">Search Engine Optimization</p>
+      </div>
+      <div class="bg-gray-100 p-2 rounded-full">
+        <svg class="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M12.293 2.293a1 1 0 011.414 0L19 7.586a1 1 0 01-1.414 1.414L14 5.414V17a1 1 0 11-2 0V5.414L8.414 9a1 1 0 01-1.414-1.414l5.293-5.293z" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Card2 -->
+    <div class="flex items-center justify-between p-6 border rounded-xl hover:shadow-md transition">
+      <div class="flex items-center space-x-4">
+        <div class="bg-white p-3 rounded-full shadow-md">
+          <img src="./assests/images/digital-marketing-digital-icon1 (1).svg" alt="SMM" class="w-8 h-8" />
+        </div>
+        <p class="text-lg font-medium text-gray-800">Graphic Design</p>
+      </div>
+      <div class="bg-gray-100 p-2 rounded-full">
+        <svg class="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M12.293 2.293a1 1 0 011.414 0L19 7.586a1 1 0 01-1.414 1.414L14 5.414V17a1 1 0 11-2 0V5.414L8.414 9a1 1 0 01-1.414-1.414l5.293-5.293z" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Card3 -->
+    <div class="flex items-center justify-between p-6 border rounded-xl hover:shadow-md transition">
+      <div class="flex items-center space-x-4">
+        <div class="bg-white p-3 rounded-full shadow-md">
+          <img src="./assests/images/digital-marketing-digital-icon3.svg" alt="SMM" class="w-8 h-8" />
+        </div>
+        <p class="text-lg font-medium text-gray-800">Meta Ads</p>
+      </div>
+      <div class="bg-gray-100 p-2 rounded-full">
+        <svg class="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M12.293 2.293a1 1 0 011.414 0L19 7.586a1 1 0 01-1.414 1.414L14 5.414V17a1 1 0 11-2 0V5.414L8.414 9a1 1 0 01-1.414-1.414l5.293-5.293z" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Card4 -->
+     <div class="flex items-center justify-between p-6 border rounded-xl hover:shadow-md transition">
+      <div class="flex items-center space-x-4">
+        <div class="bg-white p-3 rounded-full shadow-md">
+          <img src="./assests/images/performance-marketing-digital-icon3.svg" alt="SEO" class="w-8 h-8" />
+        </div>
+        <p class="text-lg font-medium text-gray-800">Google Ads</p>
+      </div>
+      <div class="bg-gray-100 p-2 rounded-full">
+        <svg class="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M12.293 2.293a1 1 0 011.414 0L19 7.586a1 1 0 01-1.414 1.414L14 5.414V17a1 1 0 11-2 0V5.414L8.414 9a1 1 0 01-1.414-1.414l5.293-5.293z" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Card5 -->
+    <div class="flex items-center justify-between p-6 border rounded-xl hover:shadow-md transition">
+      <div class="flex items-center space-x-4">
+        <div class="bg-white p-3 rounded-full shadow-md">
+          <img src="./assests/images/performance-marketing-digital-icon6 (1).svg" alt="SMM" class="w-8 h-8" />
+        </div>
+        <p class="text-lg font-medium text-gray-800">Website Development</p>
+      </div>
+      <div class="bg-gray-100 p-2 rounded-full">
+        <svg class="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M12.293 2.293a1 1 0 011.414 0L19 7.586a1 1 0 01-1.414 1.414L14 5.414V17a1 1 0 11-2 0V5.414L8.414 9a1 1 0 01-1.414-1.414l5.293-5.293z" />
+        </svg>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA Button -->
+  <div class="mt-12 flex justify-center">
+      <a href="#contact" class="bg-[#f89e1b] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#8E81FA] transition">
+    Get Free Audit
+  </a>
+  </div>
+</div>
+
+
+  <!-- Why Choose Us Section -->
+  <section id="why" class="relative py-20 px-5 md:px-20 bg-gray-50 text-center" data-aos="fade-up">
+    <img src="./assests/images/blogImg8.jpg" class="absolute top-10 left-5 w-12 opacity-20" />
+    <img src="./assests/images/blogImg8.jpg" class="absolute bottom-10 right-10 w-20 opacity-30" />
+    <h2 class="text-3xl font-bold mb-12 text-[#8E81FA] uppercase">Why Choose Us?</h2>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div><h4 class="text-xl font-semibold mb-2">Certified Experts</h4><p class="text-gray-600">We’re Google-certified with years of ad management experience.</p></div>
+      <div><h4 class="text-xl font-semibold mb-2">Proven Results</h4><p class="text-gray-600">We deliver consistent results through data-driven strategies.</p></div>
+      <div><h4 class="text-xl font-semibold mb-2">Transparent Reporting</h4><p class="text-gray-600">Stay informed with detailed, honest performance reports.</p></div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-20 px-5 md:px-20 bg-white text-center" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-12 text-[#f89e1b] uppercase">Client Testimonials</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div class="p-6 border rounded-xl shadow"><p class="italic mb-3">"Digital Market Tap transformed our ad performance. We saw a 300% ROI!"</p><p class="font-semibold">– Anjali K., E-commerce Founder</p></div>
+      <div class="p-6 border rounded-xl shadow"><p class="italic mb-3">"Professional, transparent and results-oriented agency. Highly recommend!"</p><p class="font-semibold">– Ramesh T., Real Estate Agent</p></div>
+      <div class="p-6 border rounded-xl shadow"><p class="italic mb-3">"Our leads doubled within 45 days of starting Google Ads with them."</p><p class="font-semibold">– Priya D., SaaS Startup</p></div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact" class="relative bg-black text-white rounded-t-[35px] md:rounded-t-[50px] pt-20 pb-10 px-5 md:px-20" data-aos="fade-up">
+    <!-- Floating Circle -->
+    <div class="blob w-16 h-16 rounded-full bg-[#8E81FA] bottom-5 left-5 blob-animate"></div>
+    <div class="flex flex-col lg:flex-row gap-10">
+      <div class="w-full lg:w-1/2 max-w-xl">
+        <h2 class="text-3xl lg:text-4xl font-bold mb-6">Get a Free Consultation</h2>
+        <p class="text-white/80 mb-6">Let us audit your ads and show how you can improve results dramatically.</p>
+        <ul class="space-y-3 text-sm mb-6">
+          <li class="flex items-start gap-2">✔ Expert evaluation of current campaigns</li>
+          <li class="flex items-start gap-2">✔ Actionable strategy for better ROI</li>
+          <li class="flex items-start gap-2">✔ Zero commitment, 100% value</li>
+        </ul>
+        <a href="#services" class="bg-[#f89e1b] text-black px-6 py-3 rounded-lg font-semibold hover:bg-[#8E81FA] hover:text-white transition">
+          <span class="underline-animate">See What We Offer</span>
+        </a>
+      </div>
+      <div class="w-full lg:w-1/2">
+        <div class="bg-white text-black rounded-[40px] p-6 md:p-10 w-full max-w-xl mx-auto">
+          <h3 class="text-xl md:text-2xl font-bold mb-4">Request a Free Audit</h3>
+          <form class="space-y-4" id="auditForm">
+            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none" />
+            <input type="email" placeholder="Email" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none" />
+            <input type="tel" placeholder="Phone Number" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none" />
+            <input type="text" placeholder="Your Business Name" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none" />
+            <textarea placeholder="Message" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none"></textarea>
+            <button type="submit" class="w-full bg-[#f89e1b] text-white font-semibold py-3 rounded-xl hover:bg-[#8E81FA] transition">
+              <span class="underline-animate">SEND REQUEST</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-sm text-gray-700 py-4 px-5 md:px-20 border-t border-gray-700">
+    <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-white">
+      <p>© 2025 Digital Market Tap. All rights reserved.</p>
+      <!-- <div class="flex gap-4">
+        <a href="#" class="underline-animate hover:text-[#f89e1b]">Privacy Policy</a>
+        <a href="#" class="underline-animate hover:text-[#f89e1b]">Terms & Conditions</a>
+      </div> -->
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    new Swiper(".myHeroSwiper", {
+      loop: true,
+      pagination: { el: ".swiper-pagination", clickable: true },
+      autoplay: { delay: 4000, disableOnInteraction: false },
+    });
+
+    const form = document.getElementById("auditForm");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const inputs = form.querySelectorAll("input, textarea");
+      let hasError = false;
+      inputs.forEach(input => {
+        input.classList.remove("border-red-500");
+        if (!input.value.trim()) {
+          input.classList.add("border-red-500");
+          hasError = true;
+        }
+      });
+
+      const email = form.querySelector('input[type="email"]');
+      const phone = form.querySelector('input[type="tel"]');
+
+      if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email.value)) {
+        email.classList.add("border-red-500");
+        hasError = true;
+      }
+
+      if (!/^[0-9]{10}$/.test(phone.value)) {
+        phone.classList.add("border-red-500");
+        hasError = true;
+      }
+
+      if (hasError) {
+        alert("Please fill out all fields correctly.");
+      } else {
+        alert("Form submitted successfully!");
+        form.reset();
+      }
+    });
+
+    document.getElementById("mobile-menu-btn").addEventListener("click", () => {
+      document.getElementById("mobile-menu").classList.remove("translate-x-full");
+    });
+
+    document.getElementById("close-menu").addEventListener("click", () => {
+      document.getElementById("mobile-menu").classList.add("translate-x-full");
+    });
+  </script>
+</body>
+</html>

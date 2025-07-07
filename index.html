@@ -102,7 +102,7 @@
 
   <!-- Hero Section -->
   <section class="relative overflow-hidden">
-    <div class="swiper myHeroSwiper h-[500px]">
+    <div class="swiper myHeroSwiper h-[360px] md:h-[520px]">
       <div class="swiper-wrapper">
         <div class="swiper-slide bg-[url('./assests/images/blogImg8.jpg')] bg-cover bg-center text-white flex items-center justify-center">
           <div class="text-center px-5 md:px-20">
@@ -171,18 +171,18 @@
   <!-- Services Section Ends -->
 
   <!-- Our Process -->
-<section id="process" class="bg-[#0D0D16] text-white pt-8 pb-32 px-5 md:px-20 overflow-hidden relative">
-<h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-12 text-[#f89e1b] uppercase">Our Process</h2>
+<section id="process" class="bg-[#0D0D16] text-white pt-8 pb-32 px-4 sm:px-8 md:px-20 overflow-hidden relative">
+  <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-12 text-[#f89e1b] uppercase">Our Process</h2>
 
   <div class="max-w-7xl mx-auto relative z-10">
-    
-    <!-- SVG Curved Path -->
-    <svg id="timeline-svg" viewBox="0 0 1200 300" class="absolute w-full h-[300px] top-0 left-0 pointer-events-none z-0">
+
+    <!-- SVG Curved Path (hidden on small screens) -->
+    <svg id="timeline-svg" viewBox="0 0 1200 300" class="absolute w-full h-[300px] top-0 left-0 pointer-events-none z-0 hidden sm:block">
       <path id="timeline-path"
         d="M20 20
           H1100
           C1170 20 1180 60 1180 240
-          C1180 280 1090 280 960 280
+          C1180 280 1090 260 990 280
           H20"
         stroke="#f89e1b"
         stroke-width="6"
@@ -193,71 +193,73 @@
       />
     </svg>
 
-    <!-- Process Steps -->
-    <div class="grid grid-cols-3 gap-y-44 relative z-20">
+    <!-- Process Steps Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 sm:gap-y-20 lg:gap-y-40 gap-x-6 relative z-20">
       
-      <!-- Step 1: Requirement Analysis -->
-      <div class="col-span-1 flex flex-col items-center">
+      <!-- Step 1 -->
+      <div class="flex flex-col items-center text-center">
         <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mb-4">
           <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 3.75A6.75 6.75 0 0117.25 10.5c0 1.5-.5 2.9-1.4 3.95l3.8 3.8a.75.75 0 11-1.06 1.06l-3.8-3.8a6.73 6.73 0 01-3.95 1.35 6.75 6.75 0 110-13.5z" />
           </svg>
         </div>
-        <p class="text-sm text-center">Requirement Analysis</p>
+        <p class="text-sm">Requirement Analysis</p>
       </div>
 
-      <!-- Step 2: Project Allocation -->
-      <div class="col-span-1 flex flex-col items-center">
+      <!-- Step 2 -->
+      <div class="flex flex-col items-center text-center">
         <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mb-4">
           <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 4h16v4H4zM4 10h10v4H4zM4 16h16v4H4z" />
           </svg>
         </div>
-        <p class="text-sm text-center">Project Allocation</p>
+        <p class="text-sm">Project Allocation</p>
       </div>
 
-      <!-- Step 3: Team Match-Up -->
-      <div class="col-span-1 flex flex-col items-center">
+      <!-- Step 3 -->
+      <div class="flex flex-col items-center text-center">
         <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mb-4">
           <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a4 4 0 00-5-3.87M9 20H4v-2a4 4 0 015-3.87M15 11a4 4 0 10-6 0m6 0a4 4 0 00-6 0" />
           </svg>
         </div>
-        <p class="text-sm text-center">Team Match-Up</p>
+        <p class="text-sm">Team Match-Up</p>
       </div>
 
-      <!-- Step 4: Project Implementation -->
-      <div class="col-span-1 flex flex-col items-center">
+      <!-- Step 4 -->
+      <div class="flex flex-col items-center text-center">
         <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mb-4">
           <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <p class="text-sm text-center">Project Implementation</p>
+        <p class="text-sm">Project Implementation</p>
       </div>
 
-      <!-- Step 5: Effect Analysis -->
-      <div class="col-span-1 flex flex-col items-center">
+      <!-- Step 5 -->
+      <div class="flex flex-col items-center text-center">
         <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mb-4">
           <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v18h18M7 14l4-4 4 4" />
           </svg>
         </div>
-        <p class="text-sm text-center">Effect Analysis</p>
+        <p class="text-sm">Effect Analysis</p>
       </div>
 
-      <!-- Step 6: Long-Term Relationship -->
-      <div class="col-span-1 flex flex-col items-center">
+      <!-- Step 6 -->
+      <div class="flex flex-col items-center text-center">
         <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mb-4">
           <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 21C6.5 17 4 14 4 10a4 4 0 118 0 4 4 0 018 0c0 4-2.5 7-8 11z" />
           </svg>
         </div>
-        <p class="text-sm text-center">Long-Term Relationship</p>
+        <p class="text-sm">Long-Term Relationship</p>
       </div>
+
     </div>
   </div>
 </section>
+
   <!-- Our Process Ends -->
 
   <!-- Why Choose Us Section Starts-->
@@ -686,6 +688,27 @@ Internationally recognized and nationally awarded, we deliver powerful technolog
     </svg>
   </div>
 </a>
+
+<!-- Floating call Button -->
+<a href="tel:+917290969680" target="_blank"
+   class="fixed bottom-32 md:bottom-42 left-8 z-50 group"
+   aria-label="Call Now">
+
+  <!-- Pulse background -->
+  <span class="absolute inset-0 rounded-full bg-blue-600 opacity-80 animate-ping z-[-1]"
+        style="animation-duration: 2.5s;"></span>
+
+  <!-- Call button -->
+  <div class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-full shadow-2xl transition-transform duration-300 flex items-center justify-center group-hover:scale-110">
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24"
+         fill="currentColor"
+         class="w-10 h-10">
+      <path d="M2.25 4.5A2.25 2.25 0 014.5 2.25h2.379a2.25 2.25 0 012.121 1.515l.645 1.935a2.25 2.25 0 01-.519 2.343L7.53 9.48a14.25 14.25 0 006.99 6.99l1.437-1.597a2.25 2.25 0 012.343-.519l1.935.645a2.25 2.25 0 011.515 2.121V19.5a2.25 2.25 0 01-2.25 2.25H19.5C10.492 21.75 2.25 13.508 2.25 4.5V4.5z"/>
+    </svg>
+  </div>
+</a>
+
 
   <!-- Scripts -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

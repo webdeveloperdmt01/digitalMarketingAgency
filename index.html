@@ -37,7 +37,7 @@
       content: "";
       position: absolute;
       width: 0%;
-      height: 1px;
+      height: 2px;
       bottom: 0;
       left: 0;
       background-color: currentColor;
@@ -85,7 +85,7 @@
 <body class="!bg-gradient-to-b from-[#fff7ee] to-[#FFFFFF] font-sans antialiased text-gray-800 relative">
 
   <!-- Header -->
- <header class="bg-[#fff7ee] px-6 md:px-12 lg:px-28 pb-2 flex items-center sticky top-0 z-50 shadow">
+ <header class="bg-[#fff7ee] px-6 md:px-12 lg:px-28 pb-2 flex items-center top-0 z-50 shadow">
   <div class="flex items-center space-x-3">
     <a href="index.html"><img src="./assests/images/dmt-main-logo.png" alt="Digital Market Tap Logo" class="h-16 md:h-18 lg:h-20" /></a> 
   </div>
@@ -101,186 +101,292 @@
 </header>
 
   <!-- Hero Section -->
-  <section class="relative overflow-hidden">
+  <section id="hero" class="relative overflow-hidden">
     <div class="swiper myHeroSwiper h-[360px] md:h-[520px]">
       <div class="swiper-wrapper">
         <div class="swiper-slide bg-[url('./assests/images/blogImg8.jpg')] bg-cover bg-center text-white flex items-center justify-center">
           <div class="text-center px-5 md:px-20">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Grow Your Business with Google Ads</h1>
-            <p class="text-lg mb-6">Get instant visibility, drive more traffic, and convert leads with our expert Google Ads services.</p>
-           <a href="#services" class="bg-[#f89e1b] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#8E81FA] hover:text-white transition">
-            <span class="underline-animate">See What We Offer</span>
+            <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">Digital Market Tap your #1 digital growth partner</h1>
+            <p class="text-lg mb-6">Boost Your Online Presence with Proven Marketing Solutions</p>
+          <a href="#AboutUs" class="bg-[#f89e1b] text-white px-4 md:px-6 py-2 md:py-3 rounded-lg font-semibold hover:bg-[#8E81FA] hover:text-white transition">
+            <span class="underline-animate">About us</span>
           </a>
           </div>
         </div>
         <div class="swiper-slide bg-[url('./assests/images/blogImg8.jpg')] bg-cover bg-center text-white flex items-center justify-center">
           <div class="text-center px-5 md:px-20">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Instant Results with Paid Campaigns</h1>
-            <p class="text-lg mb-6">Run smart Google Ads campaigns designed to scale fast and convert better.</p>
-           <a href="#services" class="bg-[#f89e1b] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#8E81FA] hover:text-white transition">
-            <span class="underline-animate">See What We Offer</span>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">From SEO to Social Media – Full-Service Digital Marketing</h1>
+            <p class="text-lg mb-6">We provide genuine results, high leads, high traffic, more visibilit</p>
+         <a href="#services" class="bg-[#f89e1b] text-white px-4 md:px-6 py-2 md:py-3 rounded-lg font-semibold hover:bg-[#8E81FA] hover:text-white transition">
+            <span class="underline-animate">OUR SERVICES</span>
           </a>
           </div>
         </div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
-  </section>
+  </section>  
+
+  <!-- Floating Reach Us Button / Modal-->
+<button id="reachBtn"
+  class="hidden fixed top-[60px] right-6 z-50 bg-gradient-to-r from-[#f89e1b] to-[#f5b53f] hover:from-[#8E81FA] hover:to-[#a594ff]
+         text-white font-semibold p-3 md:px-6 md:py-3 rounded-full shadow-xl transition-all duration-300
+         hover:scale-105 hover:shadow-2xl flex items-center gap-2 text-sm md:text-md">
+  Reach Us
+</button>
+<div id="reachModal" class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black/30 backdrop-blur-sm">
+  <div class="bg-white rounded-2xl p-6 w-full max-w-sm relative shadow-xl animate-fade-in">
+    <button id="closeModal" class="absolute top-3 right-3 text-gray-500 hover:text-[#f89e1b] text-xl font-bold">&times;</button>
+    <h3 class="text-xl font-semibold mb-4 text-center text-[#f89e1b] uppercase">Reach Us</h3>
+    <form class="space-y-4">
+  <input 
+    type="text" 
+    placeholder="Your Name"
+    class="w-full px-3 py-2 text-sm rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]" 
+  />
+  <input 
+    type="number" 
+    placeholder="Phone Number"
+    class="w-full px-3 py-2 text-sm rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]" 
+  />
+  <input 
+    type="email" 
+    placeholder="Email"
+    class="w-full px-3 py-2 text-sm rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]" 
+  />
+  <select 
+    class="w-full px-3 py-2 rounded-xl text-sm border border-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]">
+    <option value="">Select a Service</option>
+    <option value="Website Development">Website Development</option>
+    <option value="Graphic Design">Graphic Design</option>
+    <option value="Google and Meta Ads">Google and Meta Ads</option>
+    <option value="SEO">SEO</option>
+  </select>
+  <!-- <textarea 
+    placeholder="Your Message" 
+    rows="4"
+    class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]">
+  </textarea> -->
+  <button 
+    type="submit"
+    class="w-full bg-[#f89e1b] hover:bg-[#8E81FA] text-white py-2 rounded-xl font-semibold transition duration-200">
+    Send Message
+  </button>
+</form>
+  </div>
+</div>
 
   <!-- Services Section -->
-  <section id="services" class="relative py-8 md:py-10 lg:py-18 px-6 md:px-12 lg:px-28 text-center" data-aos="fade-up">
-  <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-12 text-[#f89e1b] uppercase">Our Best Services</h2>
+  <section id="services" class="relative py-8 md:py-10 lg:py-24 px-6 md:px-12 lg:px-28 text-center" data-aos="fade-up">
+  <div class="text-left md:text-center mb-2">
+  <h2 class="relative inline-block text-3xl md:text-3xl lg:text-4xl font-bold mb-1 md:2 uppercase
+              after:content-[''] after:block after:h-[3px] after:w-24 after:bg-[#f89e1b] after:mt-1 after:mx-auto"> our best services
+            </h2>
+  </div>
+  <p class="text-center text-gray-600 text-base md:text-lg max-w-2xl mx-auto mb-6 md:mb-8 lg:mb-12"> Get expert digital marketing services, to boost your overall digital presence</p>
   <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
-    <!-- Service 1 -->
-    <div class="group bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-[#f89e1b] transition-all duration-300">
-      <div class="flex items-center justify-center w-14 h-14 rounded-full bg-[#f89e1b]/10 text-[#f89e1b] mx-auto mb-4">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M2 4h20v2H2zm0 7h14v2H2zm0 7h20v2H2z"/></svg>
-      </div>
-      <h3 class="text-xl font-semibold mb-2">SEO</h3>
-      <p class="text-gray-600 text-sm text-left">Boost visibility, rank higher on search engines, and attract quality organic traffic consistently.</p>
+<div class="p-[2px] rounded-2xl bg-gradient-to-r from-[#f89e1b] to-white group-hover:from-[#f89e1b] group-hover:to-[#8E81FA] transition-all duration-300 group">
+  <div class="bg-white rounded-2xl p-6 shadow-sm group-hover:shadow-lg transition-all duration-300">
+    <div class="flex items-center justify-center w-20 h-20 rounded-full bg-[#f89e1b]/10 text-[#f89e1b] mx-auto mb-4 hover:scale-110 transition-transform">
+      <img src="./assests/images/seo.png" alt="SEO Icon" class="w-14 h-14">
     </div>
-
-    <!-- Service 2 -->
-    <div class="group bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-[#f89e1b] transition-all duration-300">
-      <div class="flex items-center justify-center w-14 h-14 rounded-full bg-[#f89e1b]/10 text-[#f89e1b] mx-auto mb-4">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/></svg>
-      </div>
-      <h3 class="text-xl font-semibold mb-2">Google & Meta Ads</h3>
-      <p class="text-gray-600 text-sm text-left">Drive instant traffic and conversions with high-impact Google and Meta Ads campaigns.</p>
+    <h3 class="text-xl font-semibold mb-2 text-center">SEO</h3>
+    <p class="text-gray-600 text-sm text-center">
+      Boost your online visibility, get 100% organic traffic, and improve website ranking with our expert SEO services.
+    </p>
+    
+  </div>
+</div>
+    <div class="p-[2px] rounded-2xl bg-gradient-to-r from-[#f89e1b] to-white group-hover:from-[#f89e1b] group-hover:to-[#8E81FA] transition-all duration-300 group">
+  <div class="bg-white rounded-2xl p-6 shadow-sm group-hover:shadow-lg transition-all duration-300">
+    <div class="flex items-center justify-center w-20 h-20 rounded-full bg-[#f89e1b]/10 text-[#f89e1b] mx-auto mb-4 hover:scale-110 transition-transform">
+      <img src="./assests/images/ads.png" alt="SEO Icon" class="w-12 h-12">
     </div>
-
-    <!-- Service 3 -->
-    <div class="group bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-[#f89e1b] transition-all duration-300">
-      <div class="flex items-center justify-center w-14 h-14 rounded-full bg-[#f89e1b]/10 text-[#f89e1b] mx-auto mb-4">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M3 3h18v2H3zm0 4h18v2H3zm0 4h18v10H3z"/></svg>
-      </div>
-      <h3 class="text-xl font-semibold mb-2">Website Development</h3>
-      <p class="text-gray-600 text-sm text-left">Custom, responsive websites built for performance, user experience, and business growth success.</p>
+    <h3 class="text-xl font-semibold mb-2 text-center">Google & Meta Ads</h3>
+    <p class="text-gray-600 text-sm text-center">Get more Brand visibility, traffic, improve brand awareness, and global reach with our expert Google & Meta ads services.</p>
+  </div>
+</div>
+    <div class="p-[2px] rounded-2xl bg-gradient-to-r from-[#f89e1b] to-white group-hover:from-[#f89e1b] group-hover:to-[#8E81FA] transition-all duration-300 group">
+  <div class="bg-white rounded-2xl p-6 shadow-sm group-hover:shadow-lg transition-all duration-300">
+    <div class="flex items-center justify-center w-20 h-20 rounded-full bg-[#f89e1b]/10 text-[#f89e1b] mx-auto mb-4 hover:scale-110 transition-transform">
+      <img src="./assests/images/web-development.png" alt="SEO Icon" class="w-14 h-14">
     </div>
-
-    <!-- Service 4 -->
-    <div class="group bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-[#f89e1b] transition-all duration-300">
-      <div class="flex items-center justify-center w-14 h-14 rounded-full bg-[#f89e1b]/10 text-[#f89e1b] mx-auto mb-4">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M10 16.5l6-4.5-6-4.5v9z"/></svg>
-      </div>
-      <h3 class="text-xl font-semibold mb-2">Graphic Design</h3>
-      <p class="text-gray-600 text-sm text-left">Creative, impactful graphic design that elevates your brand and captivates your audience.</p>
+    <h3 class="text-xl font-semibold mb-2 text-center">Website Development</h3>
+    <p class="text-gray-600 text-sm text-center">Get High-performing Website with latest UI-UX design, fully responsive on all mobile and SEO optimized website with our expert.</p>
+  </div>
+</div>
+   <div class="p-[2px] rounded-2xl bg-gradient-to-r from-[#f89e1b] to-white group-hover:from-[#f89e1b] group-hover:to-[#8E81FA] transition-all duration-300 group">
+  <div class="bg-white rounded-2xl p-6 shadow-sm group-hover:shadow-lg transition-all duration-300">
+    <div class="flex items-center justify-center w-20 h-20 rounded-full bg-[#f89e1b]/10 text-[#f89e1b] mx-auto mb-4 hover:scale-110 transition-transform">
+      <img src="./assests/images/graphic-design.png" alt="SEO Icon" class="w-14 h-14">
     </div>
+    <h3 class="text-xl font-semibold mb-2 text-center">Graphic Design</h3>
+    <p class="text-gray-600 text-sm text-center">Get high-quality graphics, Logo designing, brand pamphlets and many more with our expert graphic design services.</p>
+  </div>
+</div>
   </div>
 </section>
   <!-- Services Section Ends -->
 
   <!-- Our Process -->
-<section id="process" class="bg-[#0D0D16] text-white pt-8 pb-32 px-4 sm:px-8 md:px-20 overflow-hidden relative">
-  <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-12 text-[#f89e1b] uppercase">Our Process</h2>
-
-  <div class="max-w-7xl mx-auto relative z-10">
-
-    <!-- SVG Curved Path (hidden on small screens) -->
-    <svg id="timeline-svg" viewBox="0 0 1200 300" class="absolute w-full h-[300px] top-0 left-0 pointer-events-none z-0 hidden sm:block">
-      <path id="timeline-path"
-        d="M20 20
-          H1100
-          C1170 20 1180 60 1180 240
-          C1180 280 1090 260 990 280
-          H20"
-        stroke="#f89e1b"
-        stroke-width="6"
-        fill="none"
-        stroke-linecap="round"
-        stroke-dasharray="2000"
-        stroke-dashoffset="2000"
-      />
-    </svg>
-
-    <!-- Process Steps Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 sm:gap-y-20 lg:gap-y-40 gap-x-6 relative z-20">
-      
-      <!-- Step 1 -->
+<section id="process" class="bg-[#0D0D16] text-white pt-12 md:pt-20 pb-32 px-4 sm:px-8 md:px-20 relative overflow-hidden">
+  <div class="text-left md:text-center">
+    <h2 class="relative inline-block text-3xl lg:text-4xl font-bold uppercase mb-3
+                after:content-[''] after:block after:h-[3px] after:w-24 after:bg-white after:mt-2 after:mx-auto">
+      Process
+    </h2>
+  </div>
+ <p class="text-center text-white text-base md:text-lg max-w-2xl mx-auto mb-12"> From analysis to impact, we deliver structured, strategic project execution.</p>
+  <svg viewBox="0 0 1200 400" class="hidden sm:block absolute top-54 left-0 w-full md:h-[305px] lg:h-[400px] z-0 pointer-events-none">
+    <path d="
+      M 100 50 
+      H 1100
+      C 1150 50, 1150 100, 1150 200 
+      C 1150 300, 1150 350, 1100 350 
+      H 100
+    " 
+    stroke="#f89e1b" 
+    stroke-width="6" 
+    fill="none" 
+    stroke-linecap="round"
+    stroke-dasharray="2000"
+    stroke-dashoffset="2000"
+    id="timeline-path"
+    />
+  </svg>
+  <div class="relative z-10 max-w-7xl mx-auto">
+    <div class="hidden sm:grid grid-cols-3 md:gap-y-28 lg:gap-y-36 gap-x-10">
       <div class="flex flex-col items-center text-center">
-        <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mb-4">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 3.75A6.75 6.75 0 0117.25 10.5c0 1.5-.5 2.9-1.4 3.95l3.8 3.8a.75.75 0 11-1.06 1.06l-3.8-3.8a6.73 6.73 0 01-3.95 1.35 6.75 6.75 0 110-13.5z" />
-          </svg>
+        <div class="w-28 h-28 bg-gray-800 rounded-full flex justify-center items-center mb-4">
+          <img src="./assests/images/requirement-analysis.png" alt="" class="w-18 h-16 invert" />
         </div>
         <p class="text-sm">Requirement Analysis</p>
       </div>
-
-      <!-- Step 2 -->
       <div class="flex flex-col items-center text-center">
-        <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mb-4">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 4h16v4H4zM4 10h10v4H4zM4 16h16v4H4z" />
-          </svg>
+        <div class="w-28 h-28 bg-gray-800 rounded-full flex justify-center items-center mb-4">
+          <img src="./assests/images/project-allocation.png" alt="" class="w-18 h-16 invert" />
         </div>
         <p class="text-sm">Project Allocation</p>
       </div>
-
-      <!-- Step 3 -->
       <div class="flex flex-col items-center text-center">
-        <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mb-4">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a4 4 0 00-5-3.87M9 20H4v-2a4 4 0 015-3.87M15 11a4 4 0 10-6 0m6 0a4 4 0 00-6 0" />
-          </svg>
+        <div class="w-28 h-28 bg-gray-800 rounded-full flex justify-center items-center mb-4">
+          <img src="./assests/images/team-matchUp.png" alt="" class="w-18 h-16 invert" />
         </div>
         <p class="text-sm">Team Match-Up</p>
       </div>
-
-      <!-- Step 4 -->
       <div class="flex flex-col items-center text-center">
-        <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mb-4">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
+        <div class="w-28 h-28 bg-gray-800 rounded-full flex justify-center items-center mb-4">
+          <img src="./assests/images/project-implementation.png" alt="" class="w-18 h-16 invert" />
         </div>
         <p class="text-sm">Project Implementation</p>
       </div>
-
-      <!-- Step 5 -->
       <div class="flex flex-col items-center text-center">
-        <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mb-4">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v18h18M7 14l4-4 4 4" />
-          </svg>
+        <div class="w-28 h-28 bg-gray-800 rounded-full flex justify-center items-center mb-4">
+          <img src="./assests/images/effect-analysis.png" alt="" class="w-18 h-16 invert" />
         </div>
         <p class="text-sm">Effect Analysis</p>
       </div>
-
-      <!-- Step 6 -->
       <div class="flex flex-col items-center text-center">
-        <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mb-4">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21C6.5 17 4 14 4 10a4 4 0 118 0 4 4 0 018 0c0 4-2.5 7-8 11z" />
-          </svg>
+        <div class="w-28 h-28 bg-gray-800 rounded-full flex justify-center items-center mb-4">
+          <img src="./assests/images/long-term-relationship.png" alt="" class="w-18 h-16 invert" />
         </div>
         <p class="text-sm">Long-Term Relationship</p>
       </div>
-
+    </div>
+   <div class="sm:hidden relative pl-6 space-y-16">
+  <div class="absolute top-0 left-[34px] h-full w-1 bg-[#f89e1b] z-0"></div>
+  <div class="relative z-10 flex items-start space-x-4">
+    <div class="w-6 h-6 bg-[#f89e1b] rounded-full relative z-10 top-8"></div>
+    <div>
+      <div class="w-20 h-20 bg-gray-800 rounded-full flex justify-center items-center mb-2">
+        <img src="./assests/images/requirement-analysis.png" class="w-14 h-12 invert" />
+      </div>
+      <p class="text-sm">Requirement Analysis</p>
     </div>
   </div>
+  <div class="relative z-10 flex items-start space-x-4">
+    <div class="w-6 h-6 bg-[#f89e1b] rounded-full relative z-10 top-8"></div>
+    <div>
+      <div class="w-20 h-20 bg-gray-800 rounded-full flex justify-center items-center mb-2">
+        <img src="./assests/images/project-allocation.png" class="w-14 h-12 invert" />
+      </div>
+      <p class="text-sm">Project Allocation</p>
+    </div>
+  </div>
+  <div class="relative z-10 flex items-start space-x-4">
+    <div class="w-6 h-6 bg-[#f89e1b] rounded-full relative z-10 top-8"></div>
+    <div>
+      <div class="w-20 h-20 bg-gray-800 rounded-full flex justify-center items-center mb-2">
+        <img src="./assests/images/team-matchUp.png" class="w-14 h-12 invert" />
+      </div>
+      <p class="text-sm">Team Match-Up</p>
+    </div>
+  </div>
+  <div class="relative z-10 flex items-start space-x-4">
+    <div class="w-6 h-6 bg-[#f89e1b] rounded-full relative z-10 top-8"></div>
+    <div>
+      <div class="w-20 h-20 bg-gray-800 rounded-full flex justify-center items-center mb-2">
+        <img src="./assests/images/project-implementation.png" class="w-14 h-12 invert" />
+      </div>
+      <p class="text-sm">Project Implementation</p>
+    </div>
+  </div>
+  <div class="relative z-10 flex items-start space-x-4">
+    <div class="w-6 h-6 bg-[#f89e1b] rounded-full relative z-10 top-8"></div>
+    <div>
+      <div class="w-20 h-20 bg-gray-800 rounded-full flex justify-center items-center mb-2">
+        <img src="./assests/images/effect-analysis.png" class="w-14 h-12 invert" />
+      </div>
+      <p class="text-sm">Effect Analysis</p>
+    </div>
+  </div>
+  <div class="relative z-10 flex items-start space-x-4">
+    <div class="w-6 h-6 bg-[#f89e1b] rounded-full relative z-10 top-8"></div>
+    <div>
+      <div class="w-20 h-20 bg-gray-800 rounded-full flex justify-center items-center mb-2">
+        <img src="./assests/images/long-term-relationship.png" class="w-14 h-12 invert" />
+      </div>
+      <p class="text-sm">Long-Term Relationship</p>
+    </div>
+  </div>
+</div>
+  </div>
 </section>
-
   <!-- Our Process Ends -->
 
   <!-- Why Choose Us Section Starts-->
-  <section id="why" class="relative py-8 md:py-10 lg:py-18 px-6 md:px-12 lg:px-28 text-center" data-aos="fade-up">
- <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-12 text-[#f89e1b] uppercase">Why Choose Us?</h2>
+  <section id="why" class="relative py-8 md:py-10 lg:py-24 px-6 md:px-12 lg:px-28 text-center" data-aos="fade-up">
+ <div class="text-left md:text-center">
+  <h2 class="relative inline-block text-3xl md:text-3xl lg:text-4xl font-bold mb-1 md:2 uppercase
+              after:content-[''] after:block after:h-[3px] after:w-24 after:bg-[#f89e1b] after:mt-1 after:mx-auto">
+   why choose us ?
+  </h2>
+</div>
+<p class="max-w-2xl mx-auto text-sm md:text-lg text-gray-600 text-left md:text-center mb-5 md:mb-10">
+ We are a digital marketing agency that delivers tangible results.
+</p>
+
     <div class="grid md:grid-cols-3 gap-10">
-      <div class="border p-8"><h4 class="text-xl font-semibold mb-2">Certified Experts</h4><p class="text-gray-600">We’re Google-certified with years of ad management experience.</p></div>
-      <div class="border p-8"><h4 class="text-xl font-semibold mb-2">Proven Results</h4><p class="text-gray-600">We deliver consistent results through data-driven strategies.</p></div>
-      <div class="border p-8"><h4 class="text-xl font-semibold mb-2">Transparent Reporting</h4><p class="text-gray-600">Stay informed with detailed, honest performance reports.</p></div>
+      <div class="border p-4 md:p-5 lg:p-8"><h4 class="text-xl font-semibold mb-2">Certified Experts</h4><p class="text-gray-600">We’re Google-certified with years of ad management experience.</p></div>
+      <div class="border p-4 md:p-5 lg:p-8"><h4 class="text-xl font-semibold mb-2">Proven Results</h4><p class="text-gray-600">We deliver consistent results through data-driven strategies.</p></div>
+      <div class="border p-4 md:p-5 lg:p-8"><h4 class="text-xl font-semibold mb-2">Transparent Reporting</h4><p class="text-gray-600">Stay informed with detailed, honest performance reports.</p></div>
     </div>
     <div class="mt-12">
-      <a href="#services" class="bg-[#f89e1b] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#8E81FA] hover:text-white transition">
-              <span class="underline-animate">See What We Offer</span>
-            </a>
+      <a href="#services" class="bg-[#f89e1b] text-white px-4 md:px-6 py-2 md:py-3 rounded-lg font-semibold hover:bg-[#8E81FA] hover:text-white transition">
+            <span class="underline-animate">See What We Offer</span>
+          </a>
     </div>
   </section>
   <!-- Why Choose Us Section Ends -->
 
     <!-- Industry We Serve Section  -->
-    <section class="py-8 md:py-10 lg:py-18 px-6 md:px-12 lg:px-28">
-   <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-12 text-[#f89e1b] uppercase text-center">Industry we serve</h2>
+    <section class="py-8 md:py-10 lg:py-24 px-6 md:px-12 lg:px-28">
+   <div class="text-right md:text-center">
+  <h2 class="relative inline-block text-3xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-12 uppercase
+              after:content-[''] after:block after:h-[3px] after:w-24 after:bg-[#f89e1b] after:mt-1 after:mx-auto">
+industries we serve
+  </h2>
+</div>
 
     <div class="max-w-7xl mx-auto">
       <!-- Swiper -->
@@ -374,29 +480,23 @@
   </section>
     <!-- Industry We Serve Section Ends -->
 
-  <div class="px-6 pt-2 md:pt-8 lg:pt-12 pb-16 md:px-12 lg:px-28">
- <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-12 text-[#f89e1b] uppercase text-center">Our Valued Clients & Long-Term Partners</h2>
-  <p class="text-center text-lg text-gray-600 mb-8">
+  <div class="px-6 pt-2 md:pt-8 lg:pt-16 pb-16 md:px-12 lg:px-28">
+ <h2 class="text-[28px] md:text-3xl lg:text-4xl font-bold mb-3 md:mb-2 uppercase text-left md:text-center">Our Valued Clients & Long-Term Partners</h2>
+  <p class="text-left md:text-center text-md md:text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
 Internationally recognized and nationally awarded, we deliver powerful technology and brand growth solutions trusted by diverse industries worldwide.
   </p>
-
-  <div class="bg-white shadow-md rounded-xl pl-10 pr-2 py-12 flex flex-row md:flex-row items-center md:justify-between gap-6">
-    <!-- Left Text -->
-    <div class="text-center md:text-left pr-8 h-full border-r-2 border-gray-700">
+  <div class="bg-white shadow-md rounded-xl pl-4 md:pl-10 pr-2 py-6 md:py-12 flex flex-row md:flex-row items-center md:justify-between gap-3 md:gap-6">
+    <div class="text-center md:text-left pr-3 md:pr-8 h-full border-r-2 border-gray-700">
       <p class="text-xl font-medium text-gray-800">Trusted By<br />Businesses<br />Globally</p>
     </div>
-
-    <!-- Scrolling Logos -->
     <div class="relative overflow-hidden">
-      <div class="flex animate-marquee whitespace-nowrap gap-12">
+      <div class="flex animate-marquee whitespace-nowrap gap-5 md:gap-12">
         <img src="./assests/images/trust-img1.webp" alt="India 500" class="h-[70px] object-contain" />
         <img src="./assests/images/trust-img2.webp" alt="Clutch" class="h-[70px] object-contain" />
         <img src="./assests/images/trust-img3.webp" alt="Upwork" class="h-[70px] object-contain" />
         <img src="./assests/images/trust-img4.webp" alt="ET" class="h-[70px] object-contain" />
         <img src="./assests/images/trust-img5.webp" alt="GoodFirms" class="h-[70px] object-contain" />
         <img src="./assests/images/The-Economic-Times.webp" alt="ET Growth" class="h-[70px] object-contain" />
-
-        <!-- duplicate set for smooth loop -->
         <img src="./assests/images/trust-img1.webp" alt="India 500" class="h-[70px] object-contain" />
         <img src="./assests/images/trust-img2.webp" alt="Clutch" class="h-[70px] object-contain" />
         <img src="./assests/images/trust-img3.webp" alt="Upwork" class="h-[70px] object-contain" />
@@ -407,30 +507,26 @@ Internationally recognized and nationally awarded, we deliver powerful technolog
     </div>
   </div>
   <div class="flex justify-center p-8">
- <a href="#services" class="bg-[#f89e1b] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#8E81FA] hover:text-white transition">
+ <a href="#services" class="bg-[#f89e1b] text-white px-4 md:px-6 py-2 md:py-3 rounded-lg font-semibold hover:bg-[#8E81FA] hover:text-white transition">
             <span class="underline-animate">See What We Offer</span>
           </a>
 </div>
 </div>
 
-  <div class="max-w-7xl mx-auto px-4 py-2 md:py-10 lg:py-18">
-  <!-- Title & Description -->
+  <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-6 py-2 md:py-10 lg:py-24">
   <div class="text-center md:text-left md:flex justify-between items-start mb-12">
     <div class="md:w-1/2">
-    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-12 text-[#f89e1b]">
+    <h2 class="text-3xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-12 text-[#f89e1b] text-left">
        Digital Market Tap: <br> Marketing That Drives ROI
       </h2>
     </div>
-    <div class="md:w-1/2 mt-6 md:mt-0 text-gray-600">
+    <div class="md:w-1/2 mt-6 md:mt-0 text-gray-600 text-left">
       <p>
        Digital Market Tap is a results-focused digital marketing agency with 7+ years of expertise. We specialize in Google Ads, SEO, Branding, and Social Media. Through data-driven, creative strategies, we help startups and established brands grow, scale, and thrive online—delivering measurable ROI and standout success in competitive markets
       </p>
     </div>
   </div>
-
-  <!-- Service Cards -->
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    <!-- Card1 -->
     <div class="flex items-center justify-between p-6 border rounded-xl hover:shadow-md transition">
       <div class="flex items-center space-x-4">
         <div class="bg-white p-3 rounded-full shadow-md">
@@ -439,8 +535,6 @@ Internationally recognized and nationally awarded, we deliver powerful technolog
         <p class="text-lg font-medium text-gray-800">Search Engine Optimization</p>
       </div>
     </div>
-
-    <!-- Card2 -->
     <div class="flex items-center justify-between p-6 border rounded-xl hover:shadow-md transition">
       <div class="flex items-center space-x-4">
         <div class="bg-white p-3 rounded-full shadow-md">
@@ -449,8 +543,6 @@ Internationally recognized and nationally awarded, we deliver powerful technolog
         <p class="text-lg font-medium text-gray-800">Graphic Design</p>
       </div>
     </div>
-
-    <!-- Card3 -->
     <div class="flex items-center justify-between p-6 border rounded-xl hover:shadow-md transition">
       <div class="flex items-center space-x-4">
         <div class="bg-white p-3 rounded-full shadow-md">
@@ -459,8 +551,6 @@ Internationally recognized and nationally awarded, we deliver powerful technolog
         <p class="text-lg font-medium text-gray-800">Meta Ads</p>
       </div>
     </div>
-
-    <!-- Card4 -->
      <div class="flex items-center justify-between p-6 border rounded-xl hover:shadow-md transition">
       <div class="flex items-center space-x-4">
         <div class="bg-white p-3 rounded-full shadow-md">
@@ -469,8 +559,6 @@ Internationally recognized and nationally awarded, we deliver powerful technolog
         <p class="text-lg font-medium text-gray-800">Google Ads</p>
       </div>
     </div>
-
-    <!-- Card5 -->
     <div class="flex items-center justify-between p-6 border rounded-xl hover:shadow-md transition">
       <div class="flex items-center space-x-4">
         <div class="bg-white p-3 rounded-full shadow-md">
@@ -479,10 +567,7 @@ Internationally recognized and nationally awarded, we deliver powerful technolog
         <p class="text-lg font-medium text-gray-800">Website Development</p>
       </div>
     </div>
-
   </div>
-
-  <!-- CTA Button -->
   <div class="mt-12 flex justify-center">
    <a href="#services" class="bg-[#f89e1b] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#8E81FA] hover:text-white transition">
             <span class="underline-animate">See What We Offer</span>
@@ -491,52 +576,52 @@ Internationally recognized and nationally awarded, we deliver powerful technolog
 </div>
 
 <!-- About Us Section -->
-<section id="about" class="py-8 md:py-10 lg:py-18 px-5 md:px-20 text-gray-800">
-  <h2 class="text-3xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-12 text-[#f89e1b] uppercase text-center">ABOUT US</h2>
+<section id="AboutUs" class="py-8 md:py-10 lg:py-24 px-5 md:px-12 lg:px-8 text-gray-800">
+<div class="text-right md:text-center">
+  <h2 class="relative inline-block text-3xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-12 uppercase
+              after:content-[''] after:block after:h-[3px] after:w-24 after:bg-[#f89e1b] after:mt-1 after:mx-auto">
+    ABOUT US
+  </h2>
+</div>
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-    
-    <!-- Left: Image -->
     <div class="w-full h-full">
       <img src="./assests/images/team-work.webp" alt="Our Team" class="rounded-2xl w-full h-[280px] md:h-[320px] lg:h-[420px] object-cover" />
     </div>
-
-    <!-- Right: Text -->
     <div>
-      <h2 class="text-4xl font-bold text-[#f89e1b] mb-4">About Digital Market Tap</h2>
-      <p class="text-gray-600 mb-6 text-base leading-relaxed">
+      <h2 class="text-2xl md:text-4xl font-bold text-[#f89e1b] mb-4">About Digital Market Tap</h2>
+      <p class="text-gray-600 mb-6 text-md leading-relaxed">
         We’re a team of passionate marketers, designers, and strategists who believe in the power of performance-driven digital growth. With over 7+ years in the industry, we help brands dominate their space online through innovative strategies and data-driven execution.
       </p>
-
       <div class="space-y-3">
         <div class="flex items-start gap-3">
           <svg class="w-5 h-5 text-[#f89e1b] mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
           </svg>
-          <span>Results-first approach with full transparency</span>
+          <span class="text-sm">Results-first approach with full transparency</span>
         </div>
         <div class="flex items-start gap-3">
           <svg class="w-5 h-5 text-[#f89e1b] mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
           </svg>
-          <span>Experts in Google Ads, SEO, Branding & more</span>
+          <span class="text-sm">Experts in Google Ads, SEO, Branding & more</span>
         </div>
         <div class="flex items-start gap-3">
           <svg class="w-5 h-5 text-[#f89e1b] mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
           </svg>
-          <span>In-Depth Reporting & Real-Time Analytics</span>
+          <span class="text-sm">In-Depth Reporting & Real-Time Analytics</span>
         </div>
         <div class="flex items-start gap-3">
           <svg class="w-5 h-5 text-[#f89e1b] mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
           </svg>
-          <span>7+ Years of Proven Industry Experience</span>
+          <span class="text-sm">7+ Years of Proven Industry Experience</span>
         </div>
       </div>
 
       <div class="mt-8">
-        <a href="#services" class="bg-[#f89e1b] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#8E81FA] hover:text-white transition">
-            <span class="underline-animate">See What We Offer</span>
+        <a href="#services" class="bg-[#f89e1b] text-white px-4 md:px-6 py-2 md:py-3 rounded-lg font-semibold hover:bg-[#8E81FA] hover:text-white transition">
+            <span class="underline-animate">Who We Are</span>
           </a>
       </div>
     </div>
@@ -545,92 +630,118 @@ Internationally recognized and nationally awarded, we deliver powerful technolog
 <!-- About Us Section Ends -->
 
   <!-- Testimonials Section -->
-<section id="testimonials" class="py-8 md:py-10 lg:py-18 px-6 md:px-12 lg:px-28 text-center" data-aos="fade-up">
-  <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-12 text-[#f89e1b] uppercase text-center">Client Testimonials</h2>
+<section id="testimonials" class="pt-12 md:pt-16 lg:pt-24 pb-12 px-6 md:px-12 lg:px-28 text-center relative" data-aos="fade-up">
+  <h2 class="relative inline-block text-3xl md:text-3xl lg:text-4xl font-bold mb-3 uppercase after:content-[''] after:block after:h-[3px] after:w-20 after:bg-[#f89e1b] after:mt-2 after:mx-auto text-center">What Our Clients Say</h2>
+  <p class="max-w-2xl mx-auto text-base md:text-lg text-gray-600 mb-10">Real stories. Genuine voices. Powerful results that speak for themselves.</p>
   <div class="swiper testimonialSwiper">
-    <div class="swiper-wrapper py-8">
-
-      <!-- Testimonial 1 -->
-      <div class="swiper-slide flex justify-center">
-        <div class="bg-gray-50 p-6 rounded-xl shadow-lg max-w-md">
-          <p class="italic text-gray-700 mb-3">"Digital Market Tap transformed our ad performance. We saw a 300% ROI!"</p>
-          <p class="font-semibold text-gray-900">– Anjali K., E-commerce Founder</p>
-        </div>
+    <div class="swiper-wrapper pb-10">
+<div class="swiper-slide flex justify-center px-4">
+  <div class="relative bg-white border border-gray-200 p-6 rounded-3xl shadow-lg max-w-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group">
+    <div class="absolute top-6 left-6 opacity-10 text-6xl text-[#f89e1b]">“</div>
+    <div class="relative z-10">
+      <div class="w-14 h-14 mx-auto mb-4">
+        <img src="https://i.pravatar.cc/100?u=anjali" alt="Anjali" class="w-full h-full object-cover rounded-full border-2 border-[#f89e1b]" />
       </div>
-
-      <!-- Testimonial 2 -->
-      <div class="swiper-slide flex justify-center">
-        <div class="bg-gray-50 p-6 rounded-xl shadow-lg max-w-md">
-          <p class="italic text-gray-700 mb-3">"Professional, transparent and results-oriented agency. Highly recommend!"</p>
-          <p class="font-semibold text-gray-900">– Ramesh T., Real Estate Agent</p>
-        </div>
-      </div>
-
-      <!-- Testimonial 3 -->
-      <div class="swiper-slide flex justify-center">
-        <div class="bg-gray-50 p-6 rounded-xl shadow-lg max-w-md">
-          <p class="italic text-gray-700 mb-3">"Our leads doubled within 45 days of starting Google Ads with them."</p>
-          <p class="font-semibold text-gray-900">– Priya D., SaaS Startup</p>
-        </div>
-      </div>
-
+      <p class="italic text-gray-700 text-sm md:text-base mb-4 leading-relaxed">
+        "Digital Market Tap transformed our ad performance. We saw a 300% ROI!"
+      </p>
+      <p class="font-semibold text-gray-900 text-sm md:text-base">– Anjali K., E-commerce Founder</p>
     </div>
-
-    <!-- Pagination -->
+  </div>
+</div>
+<div class="swiper-slide flex justify-center px-4">
+  <div class="relative bg-white border border-gray-200 p-6 rounded-3xl shadow-lg max-w-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group">
+    <div class="absolute top-6 left-6 opacity-10 text-6xl text-[#f89e1b]">“</div>
+    <div class="relative z-10">
+      <div class="w-14 h-14 mx-auto mb-4">
+        <img src="https://i.pravatar.cc/100?u=ramesh" alt="Ramesh" class="w-full h-full object-cover rounded-full border-2 border-[#f89e1b]" />
+      </div>
+      <p class="italic text-gray-700 text-sm md:text-base mb-4 leading-relaxed">
+        "Professional, transparent and results-oriented agency. Highly recommend!"
+      </p>
+      <p class="font-semibold text-gray-900 text-sm md:text-base">– Ramesh T., Real Estate Agent</p>
+    </div>
+  </div>
+</div>
+<div class="swiper-slide flex justify-center px-4">
+  <div class="relative bg-white border border-gray-200 p-6 rounded-3xl shadow-lg max-w-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group">
+    <div class="absolute top-6 left-6 opacity-10 text-6xl text-[#f89e1b]">“</div>
+    <div class="relative z-10">
+      <div class="w-14 h-14 mx-auto mb-4">
+        <img src="https://i.pravatar.cc/100?u=priya" alt="Priya" class="w-full h-full object-cover rounded-full border-2 border-[#f89e1b]" />
+      </div>
+      <p class="italic text-gray-700 text-sm md:text-base mb-4 leading-relaxed">
+        "Our leads doubled within 45 days of running Google Ads with them."
+      </p>
+      <p class="font-semibold text-gray-900 text-sm md:text-base">– Priya D., SaaS Startup</p>
+    </div>
+  </div>
+</div>
+<div class="swiper-slide flex justify-center px-4">
+  <div class="relative bg-white border border-gray-200 p-6 rounded-3xl shadow-lg max-w-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group">
+    <div class="absolute top-6 left-6 opacity-10 text-6xl text-[#f89e1b]">“</div>
+    <div class="relative z-10">
+      <div class="w-14 h-14 mx-auto mb-4">
+        <img src="https://i.pravatar.cc/100?u=sahil" alt="Sahil" class="w-full h-full object-cover rounded-full border-2 border-[#f89e1b]" />
+      </div>
+      <p class="italic text-gray-700 text-sm md:text-base mb-4 leading-relaxed">
+        "They managed our SEO and PPC perfectly. Our traffic skyrocketed!"
+      </p>
+      <p class="font-semibold text-gray-900 text-sm md:text-base">– Sahil R., Digital Store Owner</p>
+    </div>
+  </div>
+</div>
+<div class="swiper-slide flex justify-center px-4">
+  <div class="relative bg-white border border-gray-200 p-6 rounded-3xl shadow-lg max-w-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group">
+    <div class="absolute top-6 left-6 opacity-10 text-6xl text-[#f89e1b]">“</div>
+    <div class="relative z-10">
+      <div class="w-14 h-14 mx-auto mb-4">
+        <img src="https://i.pravatar.cc/100?u=neha" alt="Neha" class="w-full h-full object-cover rounded-full border-2 border-[#f89e1b]" />
+      </div>
+      <p class="italic text-gray-700 text-sm md:text-base mb-4 leading-relaxed">
+        "Creative campaigns, timely reports, and great team coordination!"
+      </p>
+      <p class="font-semibold text-gray-900 text-sm md:text-base">– Neha M., Marketing Manager</p>
+    </div>
+  </div>
+</div>
+    </div>
     <div class="swiper-pagination mt-6"></div>
   </div>
 </section>
 <!-- Testimonials Section Ends -->
 
-<!-- Gradient Contact CTA Section -->
+<!-- CTA Section -->
 <section class="px-6 md:px-12 lg:px-28 py-10">
-   <div class="w-full bg-gradient-to-r from-[#8E81FA] to-[#f89e1b] px-8 py-10 rounded-2xl flex flex-col md:flex-row justify-between items-center gap-6 text-white shadow-lg">
-
-  <!-- Left Content -->
+   <div class="w-full  bg-gradient-to-r from-[#8E81FA] to-[#f89e1b] px-4 md:px-8 py-8 md:py-10 rounded-2xl flex flex-col lg:flex-row justify-between items-center gap-6 text-white shadow-lg">
   <div class="flex items-center gap-4">
-    <!-- Icon -->
-    <div class="bg-white/20 p-3 rounded-lg">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M3 5h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 6h13m-11.5 0a1.5 1.5 0 103 0m7 0a1.5 1.5 0 103 0" />
-      </svg>
-    </div>
-    <!-- Text -->
+     <img src="./assests/images/laptop.png" alt="" class="w-14 h-14">
     <div>
-      <p class="text-lg font-semibold">Need Help?</p>
+      <p class="text-xl md:text-2xl font-semibold">Need Help?</p>
       <p class="text-sm text-white/90">Connect with our experts now</p>
     </div>
   </div>
-
-  <!-- Right CTA Buttons -->
   <div class="flex flex-col md:flex-row gap-4 w-full md:w-auto text-sm md:text-base">
-
-    <!-- WhatsApp -->
     <a href="https://wa.me/917290969680" target="_blank"
       class="bg-white text-[#25D366] hover:bg-[#e8fff3] font-semibold px-6 py-2 rounded-lg shadow transition">
       Chat on WhatsApp
     </a>
-
-    <!-- Call -->
     <a href="tel:+917290969680"
       class="bg-white text-[#f89e1b] hover:bg-[#fff5e8] font-semibold px-6 py-2 rounded-lg shadow transition">
       Call Us Now
     </a>
-
-    <!-- Email -->
     <a href="mailto:support@digitalmarkettap.com"
       class="bg-white text-[#8E81FA] hover:bg-[#f4f2ff] font-semibold px-6 py-2 rounded-lg shadow transition">
       Send an Email
     </a>
-
   </div>
 </div>
 </section>
   <!-- Contact Form Section -->
   <section id="contact" class="relative bg-black text-white rounded-t-[35px] md:rounded-t-[50px] pt-20 pb-10 px-5 md:px-20" data-aos="fade-up">
-    <div class="flex flex-col lg:flex-row gap-10">
+    <div class="flex flex-col lg:flex-row gap-8 md:gap-10 lg:gap-10 xl:gap-46">
       <div class="w-full lg:w-1/2 max-w-xl">
-        <h2 class="text-3xl lg:text-5xl font-bold mb-8">Get a Free <br>consultation to <br>boost your business</h2>
+        <h2 class="text-3xl lg:text-5xl font-bold mb-8">Get a Free consultation  to boost your business</h2>
         <p class="text-white/80 mb-8">Get a free audit of your website to check if your website has issues or not. Read below to know why you need to audit the website.</p>
         <ul class="space-y-6 text-sm mb-6">
           <li class="flex items-start gap-2">✔  Audit reveals performance issues; we help fix everything efficiently.</li>
@@ -639,21 +750,21 @@ Internationally recognized and nationally awarded, we deliver powerful technolog
           <li class="flex items-start gap-2">✔ Improve site speed and performance with audit-based recommendations.</li>
         </ul>
         <div class="mt-12">
-          <a href="#services" class="bg-[#f89e1b] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#8E81FA] hover:text-white transition">
-            <span class="underline-animate">See What We Offer</span>
+        <a href="#services" class="bg-[#f89e1b] text-white px-4 md:px-6 py-2 md:py-3 rounded-lg font-semibold hover:bg-[#8E81FA] hover:text-white transition">
+            <span class="underline-animate">Request a Consultation</span>
           </a>
         </div>
       </div>
       <div class="w-full lg:w-1/2">
-        <div class="bg-white text-black rounded-[40px] p-6 md:p-10 w-full max-w-lg mx-auto">
-          <h3 class="text-xl md:text-2xl font-bold mb-4">Request a Free Audit</h3>
+        <div class="bg-white text-black rounded-[40px] p-6 md:p-10 w-full max-w-md mx-auto">
+          <h3 class="text-xl md:text-2xl font-bold mb-4">Let’s Talk About Your Project</h3>
           <form class="space-y-4" id="auditForm">
-            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none" />
-            <input type="email" placeholder="Email" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none" />
-            <input type="number" name="phone" maxlength="10" placeholder="Phone Number" inputmode="numeric"  class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none" />
-            <input type="text" placeholder="Your Business Name" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none" />
-            <textarea placeholder="Message" rows="4" class="resize-none w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none"></textarea>
-            <button type="submit" class="w-full bg-[#f89e1b] text-white font-semibold py-3 rounded-xl hover:bg-[#8E81FA] transition">
+            <input type="text" placeholder="Your Name" class="w-full px-3 py-2 rounded-xl border border-gray-300 focus:outline-none" />
+            <input type="email" placeholder="Email" class="w-full px-3 py-2 rounded-xl border border-gray-300 focus:outline-none" />
+            <input type="number" name="phone" maxlength="10" placeholder="Phone Number" inputmode="numeric"  class="w-full px-3 py-2 rounded-xl border border-gray-300 focus:outline-none" />
+            <input type="text" placeholder="Your Business Name" class="w-full px-3 py-2 rounded-xl border border-gray-300 focus:outline-none" />
+            <textarea placeholder="Message" rows="4" class="resize-none w-full px-3 py-2 rounded-xl border border-gray-300 focus:outline-none"></textarea>
+            <button type="submit" class="w-full bg-[#f89e1b] text-white font-semibold py-2 rounded-xl hover:bg-[#8E81FA] transition">
               <span class="underline-animate">SEND REQUEST</span>
             </button>
           </form>
@@ -672,18 +783,14 @@ Internationally recognized and nationally awarded, we deliver powerful technolog
 
 <!-- Floating WhatsApp Button -->
 <a href="https://wa.me/917290969680" target="_blank"
-   class="fixed bottom-12 md:bottom-24 right-8 z-50 group"
+   class="fixed bottom-12 md:bottom-24 right-4 md:right-8 z-50 group"
    aria-label="Chat on WhatsApp">
-
-  <!-- Pulse background -->
   <span class="absolute inset-0 rounded-full bg-[#147d3e] opacity-80 animate-ping z-[-1]"
         style="animation-duration: 2.5s;"></span>
-
-  <!-- WhatsApp button -->
   <div class="bg-[#25D366] hover:bg-[#1ebe5d] text-white p-2 rounded-full shadow-2xl transition-transform duration-300 flex items-center justify-center group-hover:scale-110">
     <svg xmlns="http://www.w3.org/2000/svg"
          viewBox="0 0 32 32"
-         class="w-10 h-10 fill-white">
+         class="w-5 md:w-10 h-5 md:h-10 fill-white">
       <path d="M16.004 3.2c-7.072 0-12.804 5.684-12.804 12.692 0 2.248.6 4.412 1.744 6.328L3.2 28.8l7.016-1.824c1.8.976 3.848 1.488 5.788 1.488h.004c7.068 0 12.8-5.684 12.8-12.692S23.072 3.2 16.004 3.2zm0 22.96c-1.692 0-3.508-.456-5.048-1.32l-.36-.208-4.164 1.084 1.112-4.032-.236-.376c-1.048-1.64-1.6-3.536-1.6-5.472 0-5.768 4.696-10.472 10.5-10.472 5.788 0 10.496 4.704 10.496 10.472 0 5.776-4.708 10.472-10.5 10.472zm5.748-7.804c-.316-.16-1.868-.92-2.16-1.028-.292-.108-.504-.16-.72.16-.212.316-.824 1.028-1.012 1.24-.188.212-.368.24-.684.08-.316-.16-1.336-.492-2.548-1.568-.94-.832-1.576-1.864-1.76-2.176-.184-.316-.02-.484.136-.644.14-.14.316-.368.476-.552.16-.188.212-.316.316-.528.108-.212.052-.396-.024-.556-.08-.16-.72-1.74-.988-2.384-.26-.624-.524-.54-.72-.548l-.612-.012c-.212 0-.556.08-.848.396-.292.316-1.108 1.08-1.108 2.636 0 1.552 1.132 3.052 1.288 3.264.16.212 2.228 3.408 5.408 4.776.756.324 1.344.516 1.804.66.756.24 1.444.204 1.988.124.608-.092 1.868-.764 2.132-1.5.264-.732.264-1.36.184-1.5-.08-.14-.288-.212-.604-.372z"/>
     </svg>
   </div>
@@ -691,32 +798,25 @@ Internationally recognized and nationally awarded, we deliver powerful technolog
 
 <!-- Floating call Button -->
 <a href="tel:+917290969680" target="_blank"
-   class="fixed bottom-32 md:bottom-42 left-8 z-50 group"
+   class="fixed bottom-32 md:bottom-42 left-4 md:left-8 z-50 group"
    aria-label="Call Now">
-
-  <!-- Pulse background -->
   <span class="absolute inset-0 rounded-full bg-blue-600 opacity-80 animate-ping z-[-1]"
         style="animation-duration: 2.5s;"></span>
-
-  <!-- Call button -->
   <div class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-full shadow-2xl transition-transform duration-300 flex items-center justify-center group-hover:scale-110">
     <svg xmlns="http://www.w3.org/2000/svg"
          viewBox="0 0 24 24"
          fill="currentColor"
-         class="w-10 h-10">
+         class="w-5 md:w-10 h-5 md:h-10">
       <path d="M2.25 4.5A2.25 2.25 0 014.5 2.25h2.379a2.25 2.25 0 012.121 1.515l.645 1.935a2.25 2.25 0 01-.519 2.343L7.53 9.48a14.25 14.25 0 006.99 6.99l1.437-1.597a2.25 2.25 0 012.343-.519l1.935.645a2.25 2.25 0 011.515 2.121V19.5a2.25 2.25 0 01-2.25 2.25H19.5C10.492 21.75 2.25 13.508 2.25 4.5V4.5z"/>
     </svg>
   </div>
 </a>
 
-
   <!-- Scripts -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-
-
-  
+  <!-- JS FOR U SHAPED FIGURE -->
 <script>
   window.addEventListener('scroll', () => {
     const path = document.getElementById('timeline-path');
@@ -737,8 +837,7 @@ Internationally recognized and nationally awarded, we deliver powerful technolog
   });
 </script>
 
-
-
+<!-- JS FOR SWIPER -->
    <script>
     new Swiper('.mySwiper', {
       slidesPerView: 1,
@@ -757,6 +856,7 @@ Internationally recognized and nationally awarded, we deliver powerful technolog
     });
   </script>
 
+<!-- JS FOR AOS -->
   <script>
     AOS.init();
     new Swiper(".myHeroSwiper", {
@@ -776,25 +876,19 @@ Internationally recognized and nationally awarded, we deliver powerful technolog
     });
   </script>
  
+ <!-- JS FOR FORM VALIDATION -->
 <script>
   const form = document.getElementById("auditForm");
-
-  // Limit phone input to max 10 digits
   const phoneInput = form.querySelector('input[type="tel"], input[name="phone"]');
   if (phoneInput) {
     phoneInput.addEventListener("input", () => {
-      // Remove non-digit characters and limit to 10 digits
       phoneInput.value = phoneInput.value.replace(/\D/g, "").slice(0, 10);
     });
   }
-
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-
     const inputs = form.querySelectorAll("input, textarea");
     let hasError = false;
-
-    // Reset border styles
     inputs.forEach(input => {
       input.classList.remove("border-red-500");
       if (!input.value.trim()) {
@@ -802,17 +896,12 @@ Internationally recognized and nationally awarded, we deliver powerful technolog
         hasError = true;
       }
     });
-
     const email = form.querySelector('input[type="email"]');
     const phone = form.querySelector('input[type="tel"], input[name="phone"]');
-
-    // Email validation
     if (email && !/^[\w.-]+@([\w-]+\.)+[\w-]{2,4}$/.test(email.value.trim())) {
       email.classList.add("border-red-500");
       hasError = true;
     }
-
-    // Phone number validation (only 10 digits allowed)
     if (phone) {
       const digitsOnly = phone.value.replace(/\D/g, '');
       if (!/^\d{10}$/.test(digitsOnly)) {
@@ -820,8 +909,6 @@ Internationally recognized and nationally awarded, we deliver powerful technolog
         hasError = true;
       }
     }
-
-    // Show appropriate alert
     if (hasError) {
       alert("Please fill out all fields correctly.");
     } else {
@@ -831,6 +918,7 @@ Internationally recognized and nationally awarded, we deliver powerful technolog
   });
 </script>
 
+<!-- JS FOR TESTIMONIALS -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const testimonialSwiper = new Swiper(".testimonialSwiper", {
@@ -856,5 +944,41 @@ Internationally recognized and nationally awarded, we deliver powerful technolog
     });
   });
 </script>
+
+<!-- JS FOR MODAL -->
+<script>
+  const reachBtn = document.getElementById('reachBtn');
+  const hero = document.getElementById('hero');
+  const reachModal = document.getElementById('reachModal');
+  const closeModal = document.getElementById('closeModal');
+  window.addEventListener('scroll', () => {
+    const heroBottom = hero.getBoundingClientRect().bottom;
+
+    if (heroBottom < 0) {
+      reachBtn.classList.remove('hidden');
+    } else {
+      reachBtn.classList.add('hidden');
+    }
+  });
+
+  reachBtn.addEventListener('click', () => {
+    reachModal.classList.remove('hidden');
+    document.body.classList.add('overflow-hidden');
+  });
+
+  closeModal.addEventListener('click', () => {
+    reachModal.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
+  });
+
+  // Modal close when clicking outside form
+  reachModal.addEventListener('click', (e) => {
+    if (e.target === reachModal) {
+      reachModal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+  });
+</script>
+
 </body>
 </html>

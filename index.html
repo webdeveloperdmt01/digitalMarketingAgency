@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Google Ads - Digital Market Tap</title>
     <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="icon"
       type="image/svg+xml"
-      href="./assests/images/dmt-favicon.png"
+      href="/googleads-backend/assets/favicon.png"
     />
 
     <!-- Tailwind CSS -->
@@ -31,7 +35,7 @@
         --secondary: #8e81fa;
       }
       body {
-        font-family: "Poppins", sans-serif;
+        font-family: "Syne", sans-serif !important;
       }
       .swiper-button-prev::after,
       .swiper-button-next::after {
@@ -70,16 +74,25 @@
         }
       }
       @keyframes marquee {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-.animate-marquee {
-  animation: marquee 15s linear infinite;
-}
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .animate-marquee {
+        animation: marquee 15s linear infinite;
+      }
+
+      .swiper-pagination-bullet {
+        background: #ddd;
+        opacity: 1;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: #f89e1b;
+      }
     </style>
   </head>
   <body
@@ -87,30 +100,67 @@
   >
     <!-- Header -->
     <header
-      class="bg-[#fff7ee] px-6 md:px-12 lg:px-28 pb-2 flex items-center top-0 z-50 shadow"
+      class="bg-[#fff7ee] px-6 md:px-12 lg:px-28 pb-2 flex items-center top-0 z-50 shadow relative"
     >
+      <!-- Logo -->
       <div class="flex items-center space-x-3">
-        <a href="index.html"
-          ><img
+        <a href="index.html">
+          <img
             src="./assests/images/dmt-main-logo.png"
             alt="Digital Market Tap Logo"
             class="h-16 md:h-18 lg:h-20"
-        /></a>
+          />
+        </a>
       </div>
 
-      <div class="ml-auto flex space-x-4">
+      <!-- Desktop Buttons -->
+      <div class="ml-auto hidden md:flex space-x-4">
         <a
           href="tel:+917290969680"
-          class="hidden md:inline-block text-[#f89e1b] px-4 py-2 rounded-lg text-sm font-semibold transition"
+          class="text-[#f89e1b] px-4 py-2 rounded-lg text-sm font-semibold transition"
         >
           <span class="underline-animate">Call Us</span>
         </a>
         <a
           href="mailto:support@digitalmarkettap.com"
-          class="hidden md:inline-block text-[#f89e1b] px-4 py-2 rounded-lg text-sm font-semibold transition"
+          class="text-[#f89e1b] px-4 py-2 rounded-lg text-sm font-semibold transition"
         >
           <span class="underline-animate">Email Us</span>
         </a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <div class="ml-auto md:hidden">
+        <button id="menu-btn" class="focus:outline-none">
+          <svg
+            class="w-8 h-8 text-[#f89e1b]"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden absolute top-full left-0 w-full bg-[#fff7ee] shadow-md flex flex-col space-y-4 px-6 py-4 transition-all duration-300 ease-in-out transform scale-y-0 origin-top"
+      >
+        <a href="tel:+917290969680" class="text-[#f89e1b] font-semibold"
+          >Call Us</a
+        >
+        <a
+          href="mailto:support@digitalmarkettap.com"
+          class="text-[#f89e1b] font-semibold"
+          >Email Us</a
+        >
       </div>
     </header>
 
@@ -167,7 +217,7 @@
     <!-- Floating Reach Us Button / Modal-->
     <button
       id="reachBtn"
-      class="hidden fixed top-[60px] right-0 z-50 bg-gradient-to-r from-[#f89e1b] to-[#f5b53f] hover:!bg-black  text-white font-semibold pl-3 pr-2 py-2 md:px-6 md:py-3 rounded-l-[18px] shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center gap-2 text-sm md:text-md"
+      class="hidden fixed top-[60px] right-0 z-50 bg-gradient-to-r from-[#f89e1b] to-[#f5b53f] hover:!bg-black text-white font-semibold pl-3 pr-2 py-2 md:px-6 md:py-3 rounded-l-[18px] shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center gap-2 text-sm md:text-md"
     >
       Reach Us
     </button>
@@ -190,26 +240,27 @@
           Reach Us
         </h3>
         <form
-          action="http://localhost:3000/api/submit-form"
+          action="http://localhost:5500/api/submit-form"
           method="POST"
           class="space-y-4"
         >
           <input type="hidden" name="formType" value="reach-us" />
           <input
             type="text"
-            placeholder="Your Name" 
+            placeholder="Your Name"
             required
             name="name"
             class="w-full px-3 py-2 text-sm rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
           />
           <input
-            type="number"
-            id="reachPhone"
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            id="phoneWhatWeOffer"
             inputmode="numeric"
             maxlength="10"
-            name="phone"
+            minlength="10"
             required
-            placeholder="Phone Number"
             class="w-full px-3 py-2 text-sm rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
           />
           <input
@@ -219,7 +270,9 @@
             placeholder="Email"
             class="w-full px-3 py-2 text-sm rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
           />
-          <select name="service" required
+          <select
+            name="service"
+            required
             class="w-full px-3 py-2 rounded-xl text-sm border border-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
           >
             <option value="">Select a Service</option>
@@ -246,7 +299,7 @@
     >
       <div class="text-left md:text-center mb-2">
         <h2
-          class="relative inline-block text-3xl md:text-3xl lg:text-4xl font-bold mb-1 md:2 uppercase after:content-[''] after:block after:h-[3px] after:w-24 after:bg-[#f89e1b] after:mt-1 after:mx-auto"
+          class="relative inline-block text-2xl md:text-3xl lg:text-4xl font-bold mb-1 md:2 uppercase after:content-[''] after:block after:h-[3px] after:w-24 after:bg-[#f89e1b] after:mt-1 after:mx-auto"
         >
           our best services
         </h2>
@@ -588,7 +641,7 @@
     >
       <div class="text-left md:text-center">
         <h2
-          class="relative inline-block text-3xl md:text-3xl lg:text-4xl font-bold mb-1 md:2 uppercase after:content-[''] after:block after:h-[3px] after:w-24 after:bg-[#f89e1b] after:mt-1 after:mx-auto"
+          class="relative inline-block text-2xl md:text-3xl lg:text-4xl font-bold mb-1 md:2 uppercase after:content-[''] after:block after:h-[3px] after:w-24 after:bg-[#f89e1b] after:mt-1 after:mx-auto"
         >
           why choose us ?
         </h2>
@@ -644,7 +697,12 @@
         <h2 class="text-2xl font-bold text-center mb-4 text-[#f89e1b]">
           See What We Offer
         </h2>
-        <form action="http://localhost:3000/api/submit-form" method="POST" id="serviceFormWhatWeOffer" class="space-y-4">
+        <form
+          action="http://localhost:5500/api/submit-form"
+          method="POST"
+          id="serviceFormWhatWeOffer"
+          class="space-y-4"
+        >
           <input type="hidden" name="formType" value="what-we-offer" />
           <input
             type="text"
@@ -674,7 +732,7 @@
             class="w-full border text-sm border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
           />
           <textarea
-          type="text"
+            type="text"
             placeholder="Your Query"
             rows="3"
             name="query"
@@ -697,7 +755,7 @@
     <section class="py-8 md:py-10 lg:py-24 px-6 md:px-12 lg:px-28">
       <div class="text-right md:text-center">
         <h2
-          class="relative inline-block text-3xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-12 uppercase after:content-[''] after:block after:h-[3px] after:w-24 after:bg-[#f89e1b] after:mt-1 after:mx-auto"
+          class="relative inline-block text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-12 uppercase after:content-[''] after:block after:h-[3px] after:w-24 after:bg-[#f89e1b] after:mt-1 after:mx-auto"
         >
           industries we serve
         </h2>
@@ -857,7 +915,7 @@
 
     <div class="px-6 pt-2 md:pt-8 lg:pt-16 pb-16 md:px-12 lg:px-28">
       <h2
-        class="text-[28px] md:text-3xl lg:text-4xl font-bold mb-3 md:mb-2 uppercase text-left md:text-center"
+        class="text-[25px] md:text-3xl lg:text-4xl font-bold mb-3 md:mb-2 uppercase text-left md:text-center"
       >
         Our Valued Clients & Long-Term Partners
       </h2>
@@ -879,25 +937,72 @@
           </p>
         </div>
         <div class="relative overflow-hidden">
-  <div class="flex animate-marquee w-max whitespace-nowrap gap-8">
-    <!-- Duplicate image set -->
-    <img src="./assests/images/trust-img1.webp" alt="India 500" class="h-[70px] object-contain" />
-    <img src="./assests/images/trust-img2.webp" alt="Clutch" class="h-[70px] object-contain" />
-    <img src="./assests/images/trust-img3.webp" alt="Upwork" class="h-[70px] object-contain" />
-    <img src="./assests/images/trust-img4.webp" alt="ET" class="h-[70px] object-contain" />
-    <img src="./assests/images/trust-img5.webp" alt="GoodFirms" class="h-[70px] object-contain" />
-    <img src="./assests/images/The-Economic-Times.webp" alt="ET Growth" class="h-[70px] object-contain" />
+          <div class="flex animate-marquee w-max whitespace-nowrap gap-16">
+            <!-- Duplicate image set -->
+            <img
+              src="./assests/images/trust-img1.webp"
+              alt="India 500"
+              class="h-[70px] object-contain"
+            />
+            <img
+              src="./assests/images/trust-img2.webp"
+              alt="Clutch"
+              class="h-[70px] object-contain"
+            />
+            <img
+              src="./assests/images/trust-img3.webp"
+              alt="Upwork"
+              class="h-[70px] object-contain"
+            />
+            <img
+              src="./assests/images/trust-img4.webp"
+              alt="ET"
+              class="h-[70px] object-contain"
+            />
+            <img
+              src="./assests/images/trust-img5.webp"
+              alt="GoodFirms"
+              class="h-[70px] object-contain"
+            />
+            <img
+              src="./assests/images/The-Economic-Times.webp"
+              alt="ET Growth"
+              class="h-[70px] object-contain"
+            />
 
-    <!-- Repeat for seamless scroll -->
-    <img src="./assests/images/trust-img1.webp" alt="India 500" class="h-[70px] object-contain" />
-    <img src="./assests/images/trust-img2.webp" alt="Clutch" class="h-[70px] object-contain" />
-    <img src="./assests/images/trust-img3.webp" alt="Upwork" class="h-[70px] object-contain" />
-    <img src="./assests/images/trust-img4.webp" alt="ET" class="h-[70px] object-contain" />
-    <img src="./assests/images/trust-img5.webp" alt="GoodFirms" class="h-[70px] object-contain" />
-    <img src="./assests/images/The-Economic-Times.webp" alt="ET Growth" class="h-[70px] object-contain" />
-  </div>
-</div>
-
+            <!-- Repeat for seamless scroll -->
+            <img
+              src="./assests/images/trust-img1.webp"
+              alt="India 500"
+              class="h-[70px] object-contain"
+            />
+            <img
+              src="./assests/images/trust-img2.webp"
+              alt="Clutch"
+              class="h-[70px] object-contain"
+            />
+            <img
+              src="./assests/images/trust-img3.webp"
+              alt="Upwork"
+              class="h-[70px] object-contain"
+            />
+            <img
+              src="./assests/images/trust-img4.webp"
+              alt="ET"
+              class="h-[70px] object-contain"
+            />
+            <img
+              src="./assests/images/trust-img5.webp"
+              alt="GoodFirms"
+              class="h-[70px] object-contain"
+            />
+            <img
+              src="./assests/images/The-Economic-Times.webp"
+              alt="ET Growth"
+              class="h-[70px] object-contain"
+            />
+          </div>
+        </div>
       </div>
       <div class="flex justify-center p-8">
         <a
@@ -927,8 +1032,13 @@
                 Book Your Appointment
               </h2>
 
-              <form action="http://localhost:3000/api/submit-form" method="POST" id="appointmentForm" class="space-y-4">
-                  <input type="hidden" name="formType" value="bestTimeToCall" />
+              <form
+                action="http://localhost:5500/api/submit-form"
+                method="POST"
+                id="appointmentForm"
+                class="space-y-4"
+              >
+                <input type="hidden" name="formType" value="bestTimeToCall" />
                 <input
                   type="text"
                   id="popupName"
@@ -940,12 +1050,12 @@
 
                 <input
                   type="tel"
-                  id="popupPhone"
-                  placeholder="Phone Number"
                   name="phone"
-                  required
+                  id="consultPhone"
                   inputmode="numeric"
                   maxlength="10"
+                  required
+                  placeholder="Phone Number"
                   class="w-full border text-black border-gray-300 rounded text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
                 />
 
@@ -1005,12 +1115,12 @@
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div
-          class="flex items-center justify-between p-6 border rounded-xl shadow-md transition"
+          class="flex items-center justify-between p-4 md:p-6 border rounded-xl shadow-md transition"
         >
           <div class="flex items-center space-x-4">
             <div class="bg-white p-3 rounded-full shadow-md">
               <img
-                src="./assests/images/digital-marketing-digital-icon1.svg"
+                src="./assests/images/seo_svg.png"
                 alt="SEO"
                 class="w-8 h-8"
               />
@@ -1021,12 +1131,12 @@
           </div>
         </div>
         <div
-          class="flex items-center justify-between p-6 border rounded-xl shadow-md transition"
+          class="flex items-center justify-between p-4 md:p-6 border rounded-xl shadow-md transition"
         >
           <div class="flex items-center space-x-4">
             <div class="bg-white p-3 rounded-full shadow-md">
               <img
-                src="./assests/images/digital-marketing-digital-icon1 (1).svg"
+                src="./assests/images/graphic-designsvg.png"
                 alt="SMM"
                 class="w-8 h-8"
               />
@@ -1035,12 +1145,12 @@
           </div>
         </div>
         <div
-          class="flex items-center justify-between p-6 border rounded-xl shadow-md transition"
+          class="flex items-center justify-between p-4 md:p-6 border rounded-xl shadow-md transition"
         >
           <div class="flex items-center space-x-4">
             <div class="bg-white p-3 rounded-full shadow-md">
               <img
-                src="./assests/images/digital-marketing-digital-icon3.svg"
+                src="./assests/images/meta-adssvg.png"
                 alt="SMM"
                 class="w-8 h-8"
               />
@@ -1049,12 +1159,12 @@
           </div>
         </div>
         <div
-          class="flex items-center justify-between p-6 border rounded-xl shadow-md transition"
+          class="flex items-center justify-between p-4 md:p-6 border rounded-xl shadow-md transition"
         >
           <div class="flex items-center space-x-4">
             <div class="bg-white p-3 rounded-full shadow-md">
               <img
-                src="./assests/images/performance-marketing-digital-icon3.svg"
+                src="./assests/images/google-adssvg.png"
                 alt="SEO"
                 class="w-8 h-8"
               />
@@ -1063,12 +1173,12 @@
           </div>
         </div>
         <div
-          class="flex items-center justify-between p-6 border rounded-xl shadow-md transition"
+          class="flex items-center justify-between p-4 md:p-6 border rounded-xl shadow-md transition"
         >
           <div class="flex items-center space-x-4">
             <div class="bg-white p-3 rounded-full shadow-md">
               <img
-                src="./assests/images/performance-marketing-digital-icon6 (1).svg"
+                src="./assests/images/website-developmentsvg.png"
                 alt="SMM"
                 class="w-8 h-8"
               />
@@ -1211,7 +1321,7 @@
       data-aos="fade-up"
     >
       <h2
-        class="relative inline-block text-3xl md:text-3xl lg:text-4xl font-bold mb-3 uppercase after:content-[''] after:block after:h-[3px] after:w-20 after:bg-[#f89e1b] after:mt-2 after:mx-auto text-center"
+        class="relative inline-block text-2xl md:text-3xl lg:text-4xl font-bold mb-3 uppercase after:content-[''] after:block after:h-[3px] after:w-20 after:bg-[#f89e1b] after:mt-2 after:mx-auto text-center"
       >
         What Our Clients Say
       </h2>
@@ -1367,7 +1477,7 @@
             </div>
           </div>
         </div>
-        <div class="swiper-pagination mt-6"></div>
+        <div class="swiper-pagination mt-6 text-[#f89e1b]"></div>
       </div>
     </section>
     <!-- Testimonials Section Ends -->
@@ -1412,204 +1522,232 @@
     <!-- Contact Form Section -->
     <footer
       id="contactUs"
-      class="relative bg-black text-white rounded-t-[35px] md:rounded-t-[50px] pt-20 "
+      class="relative bg-black text-white rounded-t-[35px] md:rounded-t-[50px] pt-12 md:pt-16 lg:pt-20"
       data-aos="fade-up"
     >
-    <div class="px-5 md:px-20">
-      <div
-        class="flex flex-col lg:flex-row gap-8 md:gap-10 lg:gap-10 xl:gap-46"
-      >
-        <div class="w-full lg:w-1/2 max-w-xl">
-          <h2 class="text-3xl lg:text-5xl font-bold mb-8">
-            Get a Free consultation to boost your business
-          </h2>
-          <p class="text-white/80 mb-8">
-            Get a free audit of your website to check if your website has issues
-            or not. Read below to know why you need to audit the website.
-          </p>
-          <ul class="space-y-6 text-sm mb-6">
-            <li class="flex items-start gap-2">
-              ✔ Audit reveals performance issues; we help fix everything
-              efficiently.
-            </li>
-            <li class="flex items-start gap-2">
-              ✔ Identify and fix duplicate content harming your website’s
-              reputation.
-            </li>
-            <li class="flex items-start gap-2">
-              ✔ Check keyword rankings, traffic sources, and overall site
-              performance.
-            </li>
-            <li class="flex items-start gap-2">
-              ✔ Improve site speed and performance with audit-based
-              recommendations.
-            </li>
-          </ul>
-          <div class="mt-12">
-            <a
-              href="/"
-              id="consultBtn"
-              class="bg-[#f89e1b] text-white px-4 md:px-6 py-2 md:py-3 rounded-[18px] font-semibold hover:bg-[#fff] hover:text-[#f89e1b] transition"
+      <div class="px-5 md:px-20">
+        <div
+          class="flex flex-col lg:flex-row gap-8 md:gap-10 lg:gap-10 xl:gap-46"
+        >
+          <div class="w-full lg:w-1/2 max-w-xl">
+            <h2 class="text-3xl lg:text-5xl font-bold mb-8">
+              Get a Free consultation to boost your business
+            </h2>
+            <p
+              class="text-white/80 text-lg mb-8 border-b border-[#f89e1b] pb-2"
             >
-              <span class="underline-animate">Request a Consultation</span>
-            </a>
-            <!-- Modal FOR RAC -->
-            <div
-              id="consultModal"
-              class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black/30 backdrop-blur-sm px-5"
-            >
-              <div
-                class="bg-white rounded-2xl p-6 w-full max-w-sm relative shadow-xl animate-fade-in"
+              Get a free audit of your website to check if your website has
+              issues or not. Read below to know why you need to audit the
+              website.
+            </p>
+
+            <ul class="space-y-6 text-sm mb-6">
+              <li class="flex items-start gap-2">
+                <span class="text-[#f89e1b]">✔</span> Audit reveals performance
+                issues; we help fix everything efficiently.
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#f89e1b]">✔</span> Identify and fix duplicate
+                content harming your website’s reputation.
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#f89e1b]">✔</span> Check keyword rankings,
+                traffic sources, and overall site performance.
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#f89e1b]">✔</span> Improve site speed and
+                performance with audit-based recommendations.
+              </li>
+            </ul>
+
+            <div class="mt-12">
+              <a
+                href="/"
+                id="consultBtn"
+                class="bg-[#f89e1b] text-white px-4 md:px-6 py-2 md:py-3 rounded-[18px] font-semibold hover:bg-[#fff] hover:text-[#f89e1b] transition"
               >
-                <button
-                  id="consultClose"
-                  class="absolute top-3 right-3 text-gray-500 hover:text-[#f89e1b] text-xl font-bold"
+                <span class="underline-animate">Request a Consultation</span>
+              </a>
+              <!-- Modal FOR RAC -->
+              <div
+                id="consultModal"
+                class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black/30 backdrop-blur-sm px-5"
+              >
+                <div
+                  class="bg-white rounded-2xl p-6 w-full max-w-sm relative shadow-xl animate-fade-in"
                 >
-                  &times;
-                </button>
-
-                <h3
-                  class="text-xl font-semibold mb-4 text-center text-[#f89e1b] uppercase"
-                >
-                  Request a Consultation
-                </h3>
-
-                <form id="consultForm" class="space-y-4">
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    class="w-full px-3 py-2 text-black text-sm rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
-                  />
-
-                  <input
-                    type="tel"
-                    id="consultPhone"
-                    inputmode="numeric"
-                    maxlength="10"
-                    required
-                    placeholder="Phone Number"
-                    class="w-full px-3 py-2 text-black text-sm rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
-                  />
-                  <p id="consultPhoneError" class="text-red-500 text-xs hidden">
-                    Phone number must be exactly 10 digits.
-                  </p>
-
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    class="w-full px-3 py-2 text-black text-sm rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
-                  />
-
-                  <select
-                    class="w-full px-3 py-2 text-black rounded-xl text-sm border border-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
-                  >
-                    <option value="">Select a Service</option>
-                    <option value="Website Development">
-                      Website Development
-                    </option>
-                    <option value="Graphic Design">Graphic Design</option>
-                    <option value="Google and Meta Ads">
-                      Google and Meta Ads
-                    </option>
-                    <option value="SEO">SEO</option>
-                  </select>
-
                   <button
-                    type="submit"
-                    class="w-full bg-[#f89e1b] hover:bg-[#000] text-white py-2 rounded-xl font-semibold transition duration-200"
+                    id="consultClose"
+                    class="absolute top-3 right-3 text-gray-500 hover:text-[#f89e1b] text-xl font-bold"
                   >
-                    Send Message
+                    &times;
                   </button>
-                </form>
+
+                  <h3
+                    class="text-xl font-semibold mb-4 text-center text-[#f89e1b] uppercase"
+                  >
+                    Request a Consultation
+                  </h3>
+
+                  <form
+                    action="http://localhost:5500/api/submit-form"
+                    method="POST"
+                    class="space-y-4"
+                    id="consultForm"
+                  >
+                    <input type="hidden" name="formType" value="reach-us" />
+
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Your Name"
+                      class="w-full px-3 py-2 text-black text-sm rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
+                    />
+
+                    <input
+                      type="tel"
+                      name="phone"
+                      id="consultPhone"
+                      inputmode="numeric"
+                      maxlength="10"
+                      required
+                      placeholder="Phone Number"
+                      class="w-full px-3 py-2 text-black text-sm rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
+                    />
+                    <p
+                      id="consultPhoneError"
+                      class="text-red-500 text-xs hidden"
+                    >
+                      Phone number must be exactly 10 digits.
+                    </p>
+
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      class="w-full px-3 py-2 text-black text-sm rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
+                    />
+
+                    <select
+                      class="w-full px-3 py-2 text-black rounded-xl text-sm border border-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
+                      name="service"
+                      required
+                    >
+                      <option value="">Select a Service</option>
+                      <option value="Website Development">
+                        Website Development
+                      </option>
+                      <option value="Graphic Design">Graphic Design</option>
+                      <option value="Google and Meta Ads">
+                        Google and Meta Ads
+                      </option>
+                      <option value="SEO">SEO</option>
+                    </select>
+
+                    <button
+                      type="submit"
+                      class="w-full bg-[#f89e1b] hover:bg-[#000] text-white py-2 rounded-xl font-semibold transition duration-200"
+                    >
+                      Send Message
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="w-full lg:w-1/2">
-          <div
-            class="bg-white text-black rounded-[40px] p-6 md:p-10 w-full max-w-md mx-auto"
-          >
-            <h3 class="text-xl md:text-2xl font-bold mb-4">
-              Let’s Talk About Your Project
-            </h3>
-            <form action="http://localhost:3000/api/submit-form" method="POST" class="space-y-4" id="auditForm">
-          <input type="hidden" name="formType" value="contact-us" />
-              <input
-                type="text"
-                name="name"
-                required
-                placeholder="Your Name"
-                class="w-full px-3 py-2 rounded-xl border border-gray-300 focus:outline-none"
-              />
-
-              <input
-                required
-                type="email"
-                name="email"
-                placeholder="Email"
-                class="w-full px-3 py-2 rounded-xl border border-gray-300 focus:outline-none"
-              />
-
-              <input
-                type="number"
-                required
-                name="phone"
-                maxlength="10"
-                inputmode="numeric"
-                placeholder="Phone Number"
-                class="w-full px-3 py-2 rounded-xl border border-gray-300 focus:outline-none"
-              />
-              <select
-                class="w-full px-3 py-2 rounded-xl border border-gray-300 text-sm text-gray-700 focus:outline-none"
-                name="service"
-                required
+          <div class="w-full lg:w-1/2">
+            <div
+              class="bg-white text-black rounded-[40px] p-6 md:p-10 w-full max-w-lg ml-auto"
+            >
+              <h3 class="text-xl md:text-[20px] font-bold mb-4">
+                Let’s Sit Down and Talk Strategy
+              </h3>
+              <form
+                action="http://localhost:5500/api/submit-form"
+                method="POST"
+                class="space-y-4"
+                id="auditForm"
               >
-                <option value="">Select a Service</option>
-                <option value="Website Development">Website Development</option>
-                <option value="Graphic Design">Graphic Design</option>
-                <option value="Google and Meta Ads">Google and Meta Ads</option>
-                <option value="SEO">SEO</option>
-              </select>
-              <textarea
-                name="city"
-                rows="1"
-                placeholder="City / State / Town"
-                class="resize-none w-full px-3 py-2 rounded-xl border border-gray-300 text-sm focus:outline-none"
-                required
-              ></textarea>
+                <input type="hidden" name="formType" value="contact-us" />
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  placeholder="Your Name"
+                  class="w-full px-3 py-2 rounded-xl border border-gray-300 focus:outline-none"
+                />
 
-              <textarea
-                name="message"
-                required
-                rows="3"
-                placeholder="Message"
-                class="resize-none w-full px-3 py-2 rounded-xl border border-gray-300 focus:outline-none"
-              ></textarea>
+                <input
+                  required
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  class="w-full px-3 py-2 rounded-xl border border-gray-300 focus:outline-none"
+                />
 
-              <button
-                type="submit"
-                class="w-full bg-[#f89e1b] text-white font-semibold py-2 rounded-[18px] hover:bg-[#000] transition"
-              >
-                <span class="underline-animate">SEND REQUEST</span>
-              </button>
-            </form>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="consultPhone"
+                  inputmode="numeric"
+                  maxlength="10"
+                  required
+                  placeholder="Phone Number"
+                  class="w-full px-3 py-2 rounded-xl border border-gray-300 focus:outline-none"
+                />
+                <select
+                  class="w-full px-3 py-2 rounded-xl border border-gray-300 text-sm text-gray-700 focus:outline-none"
+                  name="service"
+                  required
+                >
+                  <option value="">Select a Service</option>
+                  <option value="Website Development">
+                    Website Development
+                  </option>
+                  <option value="Graphic Design">Graphic Design</option>
+                  <option value="Google and Meta Ads">
+                    Google and Meta Ads
+                  </option>
+                  <option value="SEO">SEO</option>
+                </select>
+                <textarea
+                  name="city"
+                  rows="1"
+                  placeholder="City / State / Town"
+                  class="resize-none w-full px-3 py-2 rounded-xl border border-gray-300 text-sm focus:outline-none"
+                  required
+                ></textarea>
+
+                <textarea
+                  name="message"
+                  required
+                  rows="3"
+                  placeholder="Message"
+                  class="resize-none w-full px-3 py-2 rounded-xl border border-gray-300 focus:outline-none"
+                ></textarea>
+
+                <button
+                  type="submit"
+                  class="w-full bg-[#f89e1b] text-white font-semibold py-2 rounded-[18px] hover:bg-[#000] transition"
+                >
+                  <span class="underline-animate">SEND REQUEST</span>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-      </div>
       <section
-      class="bg-black text-sm text-gray-700 py-4 px-5 md:px-20 mt-12 rounded-t-[20px] border-t-2 border-white-700"
-    >
-      <div
-        class="flex flex-col md:flex-row justify-center items-center gap-4 text-white"
+        class="bg-black text-sm text-gray-700 py-4 px-5 md:px-20 mt-12 rounded-t-[20px] border-t-2 border-white-700"
       >
-        <p>© 2025 Digital Market Tap. All rights reserved.</p>
-      </div>
-    </section>
-  </footer>
+        <div
+          class="flex flex-col md:flex-row justify-center items-center gap-4 text-white"
+        >
+          <p>© 2025 Digital Market Tap. All rights reserved.</p>
+        </div>
+      </section>
+    </footer>
     <!-- Contact Form Section Ends -->
-
-    <!-- Footer -->
 
     <!-- Floating WhatsApp Button -->
     <a
@@ -1675,13 +1813,15 @@
         const section = document.getElementById("process");
         const rect = section.getBoundingClientRect();
 
-      const scrollPercent = Math.min(
-  Math.max(
-    ((window.innerHeight - rect.top) / (rect.height + window.innerHeight)) * 1.2,
-    0
-  ),
-  1
-);
+        const scrollPercent = Math.min(
+          Math.max(
+            ((window.innerHeight - rect.top) /
+              (rect.height + window.innerHeight)) *
+              1.2,
+            0
+          ),
+          1
+        );
 
         const pathLength = path.getTotalLength();
         path.style.strokeDashoffset = pathLength * (1 - scrollPercent);
@@ -1740,67 +1880,66 @@
 
     <!-- JS FOR FORM VALIDATION -->
     <script>
-     form.addEventListener("submit", async (e) => {
-  e.preventDefault(); // ✅ Required when using fetch
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault(); // ✅ Required when using fetch
 
-  let hasError = false;
-  const inputs = form.querySelectorAll("input, textarea");
+        let hasError = false;
+        const inputs = form.querySelectorAll("input, textarea");
 
-  inputs.forEach((input) => {
-    input.classList.remove("border-red-500");
-    if (!input.value.trim()) {
-      input.classList.add("border-red-500");
-      hasError = true;
-    }
-  });
+        inputs.forEach((input) => {
+          input.classList.remove("border-red-500");
+          if (!input.value.trim()) {
+            input.classList.add("border-red-500");
+            hasError = true;
+          }
+        });
 
-  if (emailInput) {
-    const emailRegex = /^[\w.-]+@([\w-]+\.)+[\w-]{2,4}$/;
-    if (!emailRegex.test(emailInput.value.trim())) {
-      emailInput.classList.add("border-red-500");
-      hasError = true;
-    }
-  }
+        if (emailInput) {
+          const emailRegex = /^[\w.-]+@([\w-]+\.)+[\w-]{2,4}$/;
+          if (!emailRegex.test(emailInput.value.trim())) {
+            emailInput.classList.add("border-red-500");
+            hasError = true;
+          }
+        }
 
-  if (phoneInput) {
-    const digitsOnly = phoneInput.value.replace(/\D/g, "");
-    if (digitsOnly.length !== 10) {
-      phoneInput.classList.add("border-red-500");
-      hasError = true;
-    }
-  }
+        if (phoneInput) {
+          const digitsOnly = phoneInput.value.replace(/\D/g, "");
+          if (digitsOnly.length !== 10) {
+            phoneInput.classList.add("border-red-500");
+            hasError = true;
+          }
+        }
 
-  if (hasError) {
-    alert("Please fill out all fields correctly.");
-    return;
-  }
+        if (hasError) {
+          alert("Please fill out all fields correctly.");
+          return;
+        }
 
-  // ✅ Send form data via fetch
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData.entries());
+        // ✅ Send form data via fetch
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
 
-  try {
-    const res = await fetch("http://localhost:3000/api/submit-form", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    });
+        try {
+          const res = await fetch("http://localhost:5500/api/submit-form", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          });
 
-    const result = await res.json();
-    if (res.ok) {
-      alert("Form submitted successfully!");
-      form.reset();
-    } else {
-      alert("Error submitting form: " + result.error);
-    }
-  } catch (err) {
-    alert("Submission failed. Try again.");
-    console.error("Submission error:", err);
-  }
-});
-
+          const result = await res.json();
+          if (res.ok) {
+            alert("Form submitted successfully!");
+            form.reset();
+          } else {
+            alert("Error submitting form: " + result.error);
+          }
+        } catch (err) {
+          alert("Submission failed. Try again.");
+          console.error("Submission error:", err);
+        }
+      });
     </script>
 
     <!-- JS FOR TESTIMONIALS -->
@@ -2012,6 +2151,28 @@
           reachModal?.classList.remove("hidden");
           document.body.classList.add("overflow-hidden");
         });
+      });
+    </script>
+
+    <!-- JS For Toggle Menu -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        if (mobileMenu.classList.contains("hidden")) {
+          mobileMenu.classList.remove("hidden");
+          setTimeout(() => {
+            mobileMenu.classList.remove("scale-y-0");
+            mobileMenu.classList.add("scale-y-100");
+          }, 10);
+        } else {
+          mobileMenu.classList.remove("scale-y-100");
+          mobileMenu.classList.add("scale-y-0");
+          setTimeout(() => {
+            mobileMenu.classList.add("hidden");
+          }, 300);
+        }
       });
     </script>
   </body>

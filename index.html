@@ -8,11 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/googleads-backend/assets/favicon.png"
-    />
+    <link rel="icon" type="image/svg+xml" href="assests/images/favicon.png" />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -32,7 +28,6 @@
     <style>
       :root {
         --primary: #f89e1b;
-        --secondary: #8e81fa;
       }
       body {
         font-family: "Syne", sans-serif !important;
@@ -82,7 +77,7 @@
         }
       }
       .animate-marquee {
-        animation: marquee 15s linear infinite;
+        animation: marquee 10s linear infinite;
       }
 
       .swiper-pagination-bullet {
@@ -98,11 +93,9 @@
   <body
     class="!bg-gradient-to-b from-[#fff7ee] to-[#FFFFFF] font-sans antialiased text-gray-800 relative"
   >
-    <!-- Header -->
     <header
       class="bg-[#fff7ee] px-6 md:px-12 lg:px-28 pb-2 flex items-center top-0 z-50 shadow relative"
     >
-      <!-- Logo -->
       <div class="flex items-center space-x-3">
         <a href="index.html">
           <img
@@ -112,8 +105,6 @@
           />
         </a>
       </div>
-
-      <!-- Desktop Buttons -->
       <div class="ml-auto hidden md:flex space-x-4">
         <a
           href="tel:+917290969680"
@@ -129,7 +120,6 @@
         </a>
       </div>
 
-      <!-- Mobile Hamburger -->
       <div class="ml-auto md:hidden">
         <button id="menu-btn" class="focus:outline-none">
           <svg
@@ -148,7 +138,6 @@
         </button>
       </div>
 
-      <!-- Mobile Menu -->
       <div
         id="mobile-menu"
         class="hidden absolute top-full left-0 w-full bg-[#fff7ee] shadow-md flex flex-col space-y-4 px-6 py-4 transition-all duration-300 ease-in-out transform scale-y-0 origin-top"
@@ -240,7 +229,7 @@
           Reach Us
         </h3>
         <form
-          action="http://localhost:5500/api/submit-form"
+          action="https://us-b.digitalmarkettap.com/api/submit-form"
           method="POST"
           class="space-y-4"
         >
@@ -292,124 +281,124 @@
     </div>
 
     <!-- Services Section -->
-    <section
-      id="services"
-      class="relative py-8 md:py-10 lg:py-24 px-6 md:px-12 lg:px-28 text-center"
-      data-aos="fade-up"
+   <section
+  id="services"
+  class="relative py-8 md:py-10 lg:py-24 px-6 md:px-12 lg:px-16 xl:px-28 text-center"
+  data-aos="fade-up"
+>
+  <div class="text-left md:text-center mb-2">
+    <h2
+      class="relative inline-block text-2xl md:text-3xl lg:text-4xl font-bold mb-1 uppercase after:content-[''] after:block after:h-[3px] after:w-24 after:bg-[#f89e1b] after:mt-1 after:mx-auto"
     >
-      <div class="text-left md:text-center mb-2">
-        <h2
-          class="relative inline-block text-2xl md:text-3xl lg:text-4xl font-bold mb-1 md:2 uppercase after:content-[''] after:block after:h-[3px] after:w-24 after:bg-[#f89e1b] after:mt-1 after:mx-auto"
-        >
-          our best services
-        </h2>
-      </div>
-      <p
-        class="text-center text-gray-600 text-base md:text-lg max-w-2xl mx-auto mb-6 md:mb-8 lg:mb-12"
-      >
-        Get expert digital marketing services, to boost your overall digital
-        presence
-      </p>
+      our best services
+    </h2>
+  </div>
+  <p
+    class="text-center text-gray-600 text-base md:text-lg max-w-2xl mx-auto mb-6 md:mb-8 lg:mb-12"
+  >
+    Get expert digital marketing services, to boost your overall digital
+    presence
+  </p>
+
+  <div
+    class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto"
+  >
+    <!-- Service Card -->
+    <div
+      class="p-[2px] rounded-2xl bg-gradient-to-r from-[#f89e1b] to-white group transition-all duration-300 hover:from-[#f89e1b] hover:to-[#f89e1b]"
+    >
       <div
-        class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto"
+        class="bg-white rounded-2xl p-6 shadow-md group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-[1.03]"
       >
         <div
-          class="p-[2px] rounded-2xl bg-gradient-to-r from-[#f89e1b] to-white group-hover:from-[#f89e1b] group-hover:to-[#000] transition-all duration-300 group"
+          class="flex items-center justify-center w-20 h-20 rounded-full bg-[#f89e1b]/10 text-[#f89e1b] mx-auto mb-4 transition-all duration-300 group-hover:scale-110 group-hover:animate-bounce"
         >
-          <div
-            class="bg-white rounded-2xl p-6 shadow-sm group-hover:shadow-lg transition-all duration-300"
-          >
-            <div
-              class="flex items-center justify-center w-20 h-20 rounded-full bg-[#f89e1b]/10 text-[#f89e1b] mx-auto mb-4 hover:scale-110 transition-transform"
-            >
-              <img
-                src="./assests/images/seo.png"
-                alt="SEO Icon"
-                class="w-14 h-14"
-              />
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-center">SEO</h3>
-            <p class="text-gray-600 text-sm text-center">
-              Boost your online visibility, get 100% organic traffic, and
-              improve your website ranking with our expert SEO services.
-            </p>
-          </div>
+          <img src="./assests/images/seo.png" alt="SEO Icon" class="w-14 h-14" />
         </div>
-        <div
-          class="p-[2px] rounded-2xl bg-gradient-to-r from-[#f89e1b] to-white group-hover:from-[#f89e1b] group-hover:to-[#000] transition-all duration-300 group"
-        >
-          <div
-            class="bg-white rounded-2xl p-6 shadow-sm group-hover:shadow-lg transition-all duration-300"
-          >
-            <div
-              class="flex items-center justify-center w-20 h-20 rounded-full bg-[#f89e1b]/10 text-[#f89e1b] mx-auto mb-4 hover:scale-110 transition-transform"
-            >
-              <img
-                src="./assests/images/ads.png"
-                alt="SEO Icon"
-                class="w-12 h-12"
-              />
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-center">
-              Google & Meta Ads
-            </h3>
-            <p class="text-gray-600 text-sm text-center">
-              Get more Brand visibility, traffic, improve brand awareness, and
-              global reach with our expert Google & Meta ads services.
-            </p>
-          </div>
-        </div>
-        <div
-          class="p-[2px] rounded-2xl bg-gradient-to-r from-[#f89e1b] to-white group-hover:from-[#f89e1b] group-hover:to-[#000] transition-all duration-300 group"
-        >
-          <div
-            class="bg-white rounded-2xl p-6 shadow-sm group-hover:shadow-lg transition-all duration-300"
-          >
-            <div
-              class="flex items-center justify-center w-20 h-20 rounded-full bg-[#f89e1b]/10 text-[#f89e1b] mx-auto mb-4 hover:scale-110 transition-transform"
-            >
-              <img
-                src="./assests/images/web-development.png"
-                alt="SEO Icon"
-                class="w-14 h-14"
-              />
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-center">
-              Website Development
-            </h3>
-            <p class="text-gray-600 text-sm text-center">
-              Get High-performing Website with latest UI-UX design, fully
-              responsive on all mobile and SEO optimized website with our
-              expert.
-            </p>
-          </div>
-        </div>
-        <div
-          class="p-[2px] rounded-2xl bg-gradient-to-r from-[#f89e1b] to-white group-hover:from-[#f89e1b] group-hover:to-[#000] transition-all duration-300 group"
-        >
-          <div
-            class="bg-white rounded-2xl p-6 shadow-sm group-hover:shadow-lg transition-all duration-300"
-          >
-            <div
-              class="flex items-center justify-center w-20 h-20 rounded-full bg-[#f89e1b]/10 text-[#f89e1b] mx-auto mb-4 hover:scale-110 transition-transform"
-            >
-              <img
-                src="./assests/images/graphic-design.png"
-                alt="SEO Icon"
-                class="w-14 h-14"
-              />
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-center">
-              Graphic Design
-            </h3>
-            <p class="text-gray-600 text-sm text-center">
-              Get high-quality graphics, Logo designing, brand pamphlets and
-              many more with our expert graphic design services.
-            </p>
-          </div>
-        </div>
+        <h3 class="text-xl font-semibold mb-2 text-center">SEO</h3>
+        <p class="text-gray-600 text-sm text-center">
+          Boost your online visibility, get 100% organic traffic, and improve
+          your website ranking with our experts.
+        </p>
       </div>
-    </section>
+    </div>
+
+    <!-- Service Card -->
+    <div
+      class="p-[2px] rounded-2xl bg-gradient-to-r from-[#f89e1b] to-white group transition-all duration-300 hover:from-[#f89e1b] hover:to-[#f89e1b]"
+    >
+      <div
+        class="bg-white rounded-2xl p-6 shadow-md group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-[1.03]"
+      >
+        <div
+          class="flex items-center justify-center w-20 h-20 rounded-full bg-[#f89e1b]/10 text-[#f89e1b] mx-auto mb-4 transition-all duration-300 group-hover:scale-110 group-hover:animate-bounce"
+        >
+          <img src="./assests/images/ads.png" alt="Ads Icon" class="w-12 h-12" />
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-center">
+          Google & Meta Ads
+        </h3>
+        <p class="text-gray-600 text-sm text-center">
+          Get more brand visibility, traffic, improve brand awareness, and
+          global reach with our experts.
+        </p>
+      </div>
+    </div>
+
+    <!-- Service Card -->
+    <div
+      class="p-[2px] rounded-2xl bg-gradient-to-r from-[#f89e1b] to-white group transition-all duration-300 hover:from-[#f89e1b] hover:to-[#f89e1b]"
+    >
+      <div
+        class="bg-white rounded-2xl p-6 shadow-md group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-[1.03]"
+      >
+        <div
+          class="flex items-center justify-center w-20 h-20 rounded-full bg-[#f89e1b]/10 text-[#f89e1b] mx-auto mb-4 transition-all duration-300 group-hover:scale-110 group-hover:animate-bounce"
+        >
+          <img
+            src="./assests/images/web-development.png"
+            alt="Web Dev Icon"
+            class="w-14 h-14"
+          />
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-center">
+          Website Development
+        </h3>
+        <p class="text-gray-600 text-sm text-center">
+          Get a high-performing website , modern UI/UX, fully responsive &
+          SEO-optimized by our experts.
+        </p>
+      </div>
+    </div>
+
+    <!-- Service Card -->
+    <div
+      class="p-[2px] rounded-2xl bg-gradient-to-r from-[#f89e1b] to-white group transition-all duration-300 hover:from-[#f89e1b] hover:to-[#f89e1b]"
+    >
+      <div
+        class="bg-white rounded-2xl p-6 shadow-md group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-[1.03]"
+      >
+        <div
+          class="flex items-center justify-center w-20 h-20 rounded-full bg-[#f89e1b]/10 text-[#f89e1b] mx-auto mb-4 transition-all duration-300 group-hover:scale-110 group-hover:animate-bounce"
+        >
+          <img
+            src="./assests/images/graphic-design.png"
+            alt="Graphic Design Icon"
+            class="w-14 h-14"
+          />
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-center">
+          Graphic Design
+        </h3>
+        <p class="text-gray-600 text-sm text-center">
+          Get high-quality graphics, logo design, brand brochures, and more
+          from our experts.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
     <!-- Services Section Ends -->
 
     <!-- Our Process -->
@@ -529,9 +518,18 @@
           </div>
         </div>
         <div class="sm:hidden relative pl-6 space-y-16">
-          <div
-            class="absolute top-0 left-[34px] h-full w-1 bg-[#f89e1b] z-0"
-          ></div>
+          <div class="absolute top-0 left-[34px] z-0">
+            <div
+              id="scrollLine"
+              class="w-1 bg-[#f89e1b] transition-all duration-300 ease-linear"
+              style="height: 0"
+            ></div>
+            <div
+              id="scrollBall"
+              class="w-4 h-4 bg-[#f89e1b] rounded-full absolute -left-[6px] transition-all duration-300 ease-linear"
+              style="top: 0"
+            ></div>
+          </div>
           <div class="relative z-10 flex items-start space-x-4">
             <div
               class="w-6 h-6 bg-[#f89e1b] rounded-full relative z-10 top-8"
@@ -653,19 +651,19 @@
       </p>
 
       <div class="grid md:grid-cols-3 gap-10">
-        <div class="border p-4 md:p-5 lg:p-8">
+        <div class="border p-4 md:p-5 lg:p-8 rounded-2xl shadow-md">
           <h4 class="text-xl font-semibold mb-2">Certified Experts</h4>
           <p class="text-gray-600">
             We’re Google-certified with years of ad management experience.
           </p>
         </div>
-        <div class="border p-4 md:p-5 lg:p-8">
+        <div class="border p-4 md:p-5 lg:p-8 rounded-2xl shadow-md">
           <h4 class="text-xl font-semibold mb-2">Proven Results</h4>
           <p class="text-gray-600">
             We deliver consistent results through data-driven strategies.
           </p>
         </div>
-        <div class="border p-4 md:p-5 lg:p-8">
+        <div class="border p-4 md:p-5 lg:p-8 rounded-2xl shadow-md">
           <h4 class="text-xl font-semibold mb-2">Transparent Reporting</h4>
           <p class="text-gray-600">
             Stay informed with detailed, honest performance reports.
@@ -698,7 +696,7 @@
           See What We Offer
         </h2>
         <form
-          action="http://localhost:5500/api/submit-form"
+          action="https://us-b.digitalmarkettap.com/api/submit-form"
           method="POST"
           id="serviceFormWhatWeOffer"
           class="space-y-4"
@@ -710,7 +708,7 @@
             placeholder="Name"
             id="nameWhatWeOffer"
             required
-            class="w-full border text-sm border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
+            class="w-full border text-sm border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
           />
           <input
             type="tel"
@@ -721,7 +719,7 @@
             maxlength="10"
             minlength="10"
             required
-            class="w-full border text-sm border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
+            class="w-full border text-sm border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
           />
           <input
             type="email"
@@ -729,7 +727,7 @@
             placeholder="Email"
             id="emailWhatWeOffer"
             required
-            class="w-full border text-sm border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
+            class="w-full border text-sm border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
           />
           <textarea
             type="text"
@@ -738,11 +736,11 @@
             name="query"
             id="queryWhatWeOffer"
             required
-            class="resize-none w-full border text-sm border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
+            class="resize-none w-full border text-sm border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
           ></textarea>
           <button
             type="submit"
-            class="w-full bg-[#f89e1b] text-white text-sm py-2 rounded-lg hover:bg-[#000] transition"
+            class="w-full bg-[#f89e1b] text-white text-sm py-2 rounded-xl hover:bg-[#000] transition"
           >
             Submit
           </button>
@@ -752,165 +750,102 @@
     <!-- Why Choose Us Section Ends -->
 
     <!-- Industry We Serve Section  -->
-    <section class="py-8 md:py-10 lg:py-24 px-6 md:px-12 lg:px-28">
-      <div class="text-right md:text-center">
-        <h2
-          class="relative inline-block text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-12 uppercase after:content-[''] after:block after:h-[3px] after:w-24 after:bg-[#f89e1b] after:mt-1 after:mx-auto"
-        >
-          industries we serve
-        </h2>
-      </div>
-
-      <div class="max-w-7xl mx-auto">
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="relative rounded-xl overflow-hidden shadow-lg">
-                <img
-                  src="./assests/images/image1.webp"
-                  alt="Healthcare"
-                  class="w-full h-full object-cover"
-                />
-                <div
-                  class="absolute bottom-3 left-4 text-white flex items-center gap-2 text-sm font-semibold"
-                >
-                  <svg class="w-5 h-5" fill="white" viewBox="0 0 24 24">
-                    <path
-                      d="M12 1C8 1 4 5 4 9c0 5.2 8 13 8 13s8-7.8 8-13c0-4-4-8-8-8zm0 11.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 7.5 12 7.5s2.5 1.1 2.5 2.5S13.4 12.5 12 12.5z"
-                    />
-                  </svg>
-                  Social Media
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="relative rounded-xl overflow-hidden shadow-lg">
-                <img
-                  src="./assests/images/image2.webp"
-                  alt="Social Media"
-                  class="w-full h-full object-cover"
-                />
-                <div
-                  class="absolute bottom-3 left-4 text-white flex items-center gap-2 text-sm font-semibold"
-                >
-                  <svg class="w-5 h-5" fill="white" viewBox="0 0 24 24">
-                    <path
-                      d="M3 3h18v2H3zm0 4h12v2H3zm0 4h18v2H3zm0 4h12v2H3z"
-                    />
-                  </svg>
-                  Government
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="relative rounded-xl overflow-hidden shadow-lg">
-                <img
-                  src="./assests/images/image3.webp"
-                  alt="Government"
-                  class="w-full h-full object-cover"
-                />
-                <div
-                  class="absolute bottom-3 left-4 text-white flex items-center gap-2 text-sm font-semibold"
-                >
-                  <svg class="w-5 h-5" fill="white" viewBox="0 0 24 24">
-                    <path
-                      d="M12 2L2 7v2h20V7L12 2zm0 3.3L18.74 8H5.26L12 5.3zM4 11h16v2H4zm0 4h16v2H4z"
-                    />
-                  </svg>
-                  BFSI
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="relative rounded-xl overflow-hidden shadow-lg">
-                <img
-                  src="./assests/images/image.webp"
-                  alt="BFSI"
-                  class="w-full h-full object-cover"
-                />
-                <div
-                  class="absolute bottom-3 left-4 text-white flex items-center gap-2 text-sm font-semibold"
-                >
-                  <svg class="w-5 h-5" fill="white" viewBox="0 0 24 24">
-                    <path
-                      d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm0 10.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"
-                    />
-                  </svg>
-                  Healthcare
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="relative rounded-xl overflow-hidden shadow-lg">
-                <img
-                  src="./assests/images/Legal-1.webp"
-                  alt="BFSI"
-                  class="w-full h-full object-cover"
-                />
-                <div
-                  class="absolute bottom-3 left-4 text-white flex items-center gap-2 text-sm font-semibold"
-                >
-                  <svg class="w-5 h-5" fill="white" viewBox="0 0 24 24">
-                    <path
-                      d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm0 10.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"
-                    />
-                  </svg>
-                  Legal
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="relative rounded-xl overflow-hidden shadow-lg">
-                <img
-                  src="./assests/images/Education.webp"
-                  alt="BFSI"
-                  class="w-full h-full object-cover"
-                />
-                <div
-                  class="absolute bottom-3 left-4 text-white flex items-center gap-2 text-sm font-semibold"
-                >
-                  <svg class="w-5 h-5" fill="white" viewBox="0 0 24 24">
-                    <path
-                      d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm0 10.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"
-                    />
-                  </svg>
-                  Education
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="relative rounded-xl overflow-hidden shadow-lg">
-                <img
-                  src="./assests/images/Entertainment.webp"
-                  alt="BFSI"
-                  class="w-full h-full object-cover"
-                />
-                <div
-                  class="absolute bottom-3 left-4 text-white flex items-center gap-2 text-sm font-semibold"
-                >
-                  <svg class="w-5 h-5" fill="white" viewBox="0 0 24 24">
-                    <path
-                      d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm0 10.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"
-                    />
-                  </svg>
-                  Travel & Tourism
-                </div>
-              </div>
+   <section class="py-8 md:py-10 lg:py-24 px-6 md:px-12 lg:px-28">
+  <div class="text-right md:text-center">
+    <h2
+      class="relative inline-block text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-12 uppercase after:content-[''] after:block after:h-[3px] after:w-24 after:bg-[#f89e1b] after:mt-1 after:mx-auto"
+    >
+      industries we serve
+    </h2>
+  </div>
+  <div class="max-w-7xl mx-auto">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="relative rounded-xl overflow-hidden shadow-lg">
+            <img src="./assests/images/fashion.webp" alt="Fashion" class="w-full h-[430px] object-cover" />
+            <div class="absolute bottom-3 left-4 text-white flex items-center gap-2 text-sm font-semibold">
+              <svg class="w-5 h-5" fill="#f89e1b" viewBox="0 0 24 24">
+                <path d="M16 3l5 4-1 3h-3v11h-4v-6h-2v6H7V10H4L3 7l5-4h2v3h4V3h2z"/>
+              </svg>
+              FASHION
             </div>
           </div>
-
-          <div class="flex justify-center items-center gap-4 mt-8">
-            <div
-              class="swiper-button-prev w-10 h-10 text-[#f89e1b] rounded-full shadow flex items-center justify-center hover:bg-gray-100 transition text-2xl"
-            ></div>
-            <div
-              class="swiper-button-next w-10 h-10 text-[#f89e1b] rounded-full shadow flex items-center justify-center hover:bg-gray-100 transition text-2xl"
-            ></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="relative rounded-xl overflow-hidden shadow-lg">
+            <img src="./assests/images/education1.webp" alt="Education" class="w-full h-[430px] object-cover" />
+            <div class="absolute bottom-3 left-4 text-white flex items-center gap-2 text-sm font-semibold">
+              <svg class="w-5 h-5" fill="#f89e1b" viewBox="0 0 24 24">
+                <path d="M12 3L1 9l11 6 9-5.14V17h2V9L12 3z"/>
+              </svg>
+              EDUCATION
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="relative rounded-xl overflow-hidden shadow-lg">
+            <img src="./assests/images/medical.webp" alt="Medical" class="w-full h-[430px] object-cover" />
+            <div class="absolute bottom-3 left-4 text-white flex items-center gap-2 text-sm font-semibold">
+              <svg class="w-5 h-5" fill="#f89e1b" viewBox="0 0 24 24">
+                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+              </svg>
+              MEDICAL
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="relative rounded-xl overflow-hidden shadow-lg">
+            <img src="./assests/images/furniture.webp" alt="Furniture" class="w-full h-[430px] object-cover" />
+            <div class="absolute bottom-3 left-4 text-white flex items-center gap-2 text-sm font-semibold">
+              <svg class="w-5 h-5" fill="#f89e1b" viewBox="0 0 640 512">
+                <path d="M112 128a80 80 0 0 0-80 80v160h48v32a32 32 0 0 0 64 0v-32h352v32a32 32 0 0 0 64 0v-32h48V208a80 80 0 0 0-160 0v32H272v-32a80 80 0 0 0-160 0v32H112v-32a80 80 0 0 0-80-80z"/>
+              </svg>
+              FURNITURE
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="relative rounded-xl overflow-hidden shadow-lg">
+            <img src="./assests/images/e-commerce.webp" alt="E-Commerce" class="w-full h-[430px] object-cover" />
+            <div class="absolute bottom-3 left-4 text-white flex items-center gap-2 text-sm font-semibold">
+              <svg class="w-5 h-5" fill="#f89e1b" viewBox="0 0 24 24">
+                <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm0-2h13v-2H7.42l-1.1-5H20V7H5.21l-.94-4H2v2h2l3.6 7.59-1.35 2.45C5.52 15.37 6.48 16 7.6 16zM17 18c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2z"/>
+              </svg>
+              E-COMMERCE
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="relative rounded-xl overflow-hidden shadow-lg">
+            <img src="./assests/images/handscrafts.webp" alt="Handmade Crafts" class="w-full h-[430px] object-cover" />
+            <div class="absolute bottom-3 left-4 text-white flex items-center gap-2 text-sm font-semibold">
+              <svg class="w-5 h-5" fill="#f89e1b" viewBox="0 0 24 24">
+                <path d="M7 14c1.1 0 2 .9 2 2s-.9 2-2 2a2 2 0 0 1 0-4zm0-4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm10-2.41l-4.17 4.17 4.17 4.17-1.41 1.41L12 13.41 8.41 17l-1.41-1.41L10.59 12 6.99 8.41 8.41 7 12 10.59 15.59 7l1.41 1.41z"/>
+              </svg>
+              HANDMADE CRAFTS
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="relative rounded-xl overflow-hidden shadow-lg">
+            <img src="./assests/images/food-travel.webp" alt="Food & Drinks" class="w-full h-[430px] object-cover" />
+            <div class="absolute bottom-3 left-4 text-white flex items-center gap-2 text-sm font-semibold">
+              <svg class="w-5 h-5" fill="#f89e1b" viewBox="0 0 24 24">
+                <path d="M8 2a1 1 0 0 1 1 1v6h1V3a1 1 0 0 1 2 0v6h1V3a1 1 0 1 1 2 0v6a3 3 0 0 1-3 3h-1v9a1 1 0 1 1-2 0v-9h-1a3 3 0 0 1-3-3V3a1 1 0 0 1 1-1z"/>
+              </svg>
+              FOOD & DRINKS
+            </div>
           </div>
         </div>
       </div>
-    </section>
-
+      <div class="flex justify-center items-center gap-4 mt-8">
+        <div class="swiper-button-prev w-10 h-10 text-[#f89e1b] rounded-full shadow flex items-center justify-center hover:bg-gray-100 transition text-2xl"></div>
+        <div class="swiper-button-next w-10 h-10 text-[#f89e1b] rounded-full shadow flex items-center justify-center hover:bg-gray-100 transition text-2xl"></div>
+      </div>
+    </div>
+  </div>
+</section>
     <!-- Industry We Serve Section Ends -->
 
     <div class="px-6 pt-2 md:pt-8 lg:pt-16 pb-16 md:px-12 lg:px-28">
@@ -937,68 +872,77 @@
           </p>
         </div>
         <div class="relative overflow-hidden">
-          <div class="flex animate-marquee w-max whitespace-nowrap gap-16">
-            <!-- Duplicate image set -->
+          <div
+            class="flex animate-marquee w-max whitespace-nowrap gap-10 md:gap-16"
+          >
             <img
-              src="./assests/images/trust-img1.webp"
-              alt="India 500"
+              src="./assests/images/CC-logo.webp"
+              alt="CC-logo"
               class="h-[70px] object-contain"
             />
             <img
-              src="./assests/images/trust-img2.webp"
-              alt="Clutch"
+              src="./assests/images/pw-logo.webp"
+              alt="pw-logo"
               class="h-[70px] object-contain"
             />
             <img
-              src="./assests/images/trust-img3.webp"
-              alt="Upwork"
+              src="./assests/images/Weaves-logo.webp"
+              alt="Weaves-logo"
               class="h-[70px] object-contain"
             />
             <img
-              src="./assests/images/trust-img4.webp"
-              alt="ET"
+              src="./assests/images/shreya-logo.webp"
+              alt="shreya-logo"
               class="h-[70px] object-contain"
             />
             <img
-              src="./assests/images/trust-img5.webp"
-              alt="GoodFirms"
+              src="./assests/images/dd-logo.webp"
+              alt="date-delight"
               class="h-[70px] object-contain"
             />
             <img
-              src="./assests/images/The-Economic-Times.webp"
-              alt="ET Growth"
-              class="h-[70px] object-contain"
-            />
-
-            <!-- Repeat for seamless scroll -->
-            <img
-              src="./assests/images/trust-img1.webp"
-              alt="India 500"
+              src="./assests/images/craftorium_2.webp"
+              alt="craftorium"
               class="h-[70px] object-contain"
             />
             <img
-              src="./assests/images/trust-img2.webp"
-              alt="Clutch"
+              src="./assests/images/sehajLogo.webp"
+              alt="sehajLogo"
               class="h-[70px] object-contain"
             />
             <img
-              src="./assests/images/trust-img3.webp"
-              alt="Upwork"
+              src="./assests/images/CC-logo.webp"
+              alt="CC-logo"
               class="h-[70px] object-contain"
             />
             <img
-              src="./assests/images/trust-img4.webp"
-              alt="ET"
+              src="./assests/images/pw-logo.webp"
+              alt="pw-logo"
               class="h-[70px] object-contain"
             />
             <img
-              src="./assests/images/trust-img5.webp"
-              alt="GoodFirms"
+              src="./assests/images/Weaves-logo.webp"
+              alt="Weaves-logo"
               class="h-[70px] object-contain"
             />
             <img
-              src="./assests/images/The-Economic-Times.webp"
-              alt="ET Growth"
+              src="./assests/images/shreya-logo.webp"
+              alt="shreya-logo"
+              class="h-[70px] object-contain"
+            />
+            <img
+              src="./assests/images/dd-logo.webp"
+              alt="date-delight"
+              class="h-[70px] object-contain"
+            />
+            <img
+              src="./assests/images/craftorium_2.webp"
+              alt="craftorium"
+              class="h-[70px] object-contain"
+            />
+            <img
+              src="./assests/images/sehajLogo.webp"
+              alt="sehajLogo"
               class="h-[70px] object-contain"
             />
           </div>
@@ -1033,7 +977,7 @@
               </h2>
 
               <form
-                action="http://localhost:5500/api/submit-form"
+                action="https://us-b.digitalmarkettap.com/api/submit-form"
                 method="POST"
                 id="appointmentForm"
                 class="space-y-4"
@@ -1045,7 +989,7 @@
                   placeholder="Name"
                   name="name"
                   required
-                  class="w-full border text-black border-gray-300 rounded text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
+                  class="w-full border text-black border-gray-300 rounded-xl text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
                 />
 
                 <input
@@ -1056,7 +1000,7 @@
                   maxlength="10"
                   required
                   placeholder="Phone Number"
-                  class="w-full border text-black border-gray-300 rounded text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
+                  class="w-full border text-black border-gray-300 rounded-xl text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
                 />
 
                 <input
@@ -1065,7 +1009,7 @@
                   id="popupEmail"
                   placeholder="Email"
                   required
-                  class="w-full border text-black border-gray-300 rounded text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
+                  class="w-full border text-black border-gray-300 rounded-xl text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
                 />
 
                 <textarea
@@ -1074,12 +1018,12 @@
                   name="bestTimeToCall"
                   required
                   rows="3"
-                  class="w-full resize-none text-black border border-gray-300 rounded text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
+                  class="w-full resize-none text-black border border-gray-300 rounded-xl text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f89e1b]"
                 ></textarea>
 
                 <button
                   type="submit"
-                  class="w-full bg-[#f89e1b] text-white py-2 rounded hover:bg-[#000] transition"
+                  class="w-full bg-[#f89e1b] text-white py-2 rounded-xl hover:bg-[#000] transition"
                 >
                   Submit
                 </button>
@@ -1103,7 +1047,7 @@
           </h2>
         </div>
         <div class="md:w-1/2 mt-6 md:mt-0 text-gray-600 text-left">
-          <p>
+          <p class="">
             Digital Market Tap is a results-focused digital marketing agency
             with 7+ years of expertise. We specialize in Google Ads, SEO,
             Branding, and Social Media. Through data-driven, creative
@@ -1150,12 +1094,26 @@
           <div class="flex items-center space-x-4">
             <div class="bg-white p-3 rounded-full shadow-md">
               <img
-                src="./assests/images/meta-adssvg.png"
+                src="./assests/images/smm-svg.png"
                 alt="SMM"
                 class="w-8 h-8"
               />
             </div>
-            <p class="text-lg font-medium text-gray-800">Meta Ads</p>
+            <p class="text-lg font-medium text-gray-800">Social Media Marketing</p>
+          </div>
+        </div>
+          <div
+          class="flex items-center justify-between p-4 md:p-6 border rounded-xl shadow-md transition"
+        >
+          <div class="flex items-center space-x-4">
+            <div class="bg-white p-3 rounded-full shadow-md">
+              <img
+                src="./assests/images/cw-svg.png"
+                alt="SMM"
+                class="w-8 h-8"
+              />
+            </div>
+            <p class="text-lg font-medium text-gray-800">Content Writing</p>
           </div>
         </div>
         <div
@@ -1191,7 +1149,7 @@
         <a
           href="#"
           id="getQuoteBtn"
-          class="bg-[#f89e1b] text-white px-6 py-3 rounded-[18px] font-semibold hover:bg-[#000] hover:text-white transition"
+          class="bg-[#f89e1b] text-white px-4 md:px-6 py-2 md:py-3 rounded-[18px] font-semibold hover:bg-[#000] hover:text-white transition"
           ><span class="underline-animate">Get A Quote</span></a
         >
       </div>
@@ -1221,7 +1179,7 @@
           <h2 class="text-2xl md:text-4xl font-bold text-[#f89e1b] mb-4">
             About Digital Market Tap
           </h2>
-          <p class="text-gray-600 mb-6 text-md leading-relaxed">
+          <p class="text-gray-600 mb-6 text-md md:text-lg leading-relaxed">
             We’re a team of passionate marketers, designers, and strategists who
             believe in the power of performance-driven digital growth. With over
             7+ years in the industry, we help brands dominate their space online
@@ -1242,7 +1200,7 @@
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span class="text-sm"
+              <span class="text-sm md:text-[16px]"
                 >Results-first approach with full transparency</span
               >
             </div>
@@ -1260,7 +1218,7 @@
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span class="text-sm"
+              <span class="text-sm md:text-[16px]"
                 >Experts in Google Ads, SEO, Branding & more</span
               >
             </div>
@@ -1278,7 +1236,7 @@
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span class="text-sm"
+              <span class="text-sm md:text-[16px]"
                 >In-Depth Reporting & Real-Time Analytics</span
               >
             </div>
@@ -1296,7 +1254,7 @@
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span class="text-sm"
+              <span class="text-sm md:text-[16px]"
                 >7+ Years of Proven Industry Experience</span
               >
             </div>
@@ -1351,11 +1309,11 @@
                 <p
                   class="italic text-gray-700 text-sm md:text-base mb-4 leading-relaxed"
                 >
-                  "Digital Market Tap transformed our ad performance. We saw a
-                  300% ROI!"
+                  "Quick SEO fixes boosted site speed and reduced bounce rate by
+                  30%."
                 </p>
                 <p class="font-semibold text-gray-900 text-sm md:text-base">
-                  – Anjali K., E-commerce Founder
+                  – Kareena T., E-commerce Founder
                 </p>
               </div>
             </div>
@@ -1384,7 +1342,7 @@
                   recommend!"
                 </p>
                 <p class="font-semibold text-gray-900 text-sm md:text-base">
-                  – Ramesh T., Real Estate Agent
+                  – Manish Ya., Real Estate Agent
                 </p>
               </div>
             </div>
@@ -1413,7 +1371,7 @@
                   them."
                 </p>
                 <p class="font-semibold text-gray-900 text-sm md:text-base">
-                  – Priya D., SaaS Startup
+                  – Deeksha S., SaaS Startup
                 </p>
               </div>
             </div>
@@ -1442,7 +1400,7 @@
                   skyrocketed!"
                 </p>
                 <p class="font-semibold text-gray-900 text-sm md:text-base">
-                  – Sahil R., Digital Store Owner
+                  – Rohit K., Digital Store Owner
                 </p>
               </div>
             </div>
@@ -1500,19 +1458,19 @@
           <a
             href="https://wa.me/917290969680"
             target="_blank"
-            class="bg-white text-[#25D366] hover:bg-[#e8fff3] font-semibold px-6 py-2 rounded-lg shadow transition"
+            class="bg-white text-[#25D366] hover:bg-[#e8fff3] font-semibold px-6 py-2 rounded-xl shadow transition"
           >
             Chat on WhatsApp
           </a>
           <a
             href="tel:+917290969680"
-            class="bg-white text-[#f89e1b] hover:bg-[#fff5e8] font-semibold px-6 py-2 rounded-lg shadow transition"
+            class="bg-white text-[#f89e1b] hover:bg-[#fff5e8] font-semibold px-6 py-2 rounded-xl shadow transition"
           >
             Call Us Now
           </a>
           <a
             href="mailto:support@digitalmarkettap.com"
-            class="bg-white text-[#000] hover:bg-[#f4f2ff] font-semibold px-6 py-2 rounded-lg shadow transition"
+            class="bg-white text-[#000] hover:bg-[#f4f2ff] font-semibold px-6 py-2 rounded-xl shadow transition"
           >
             Send an Email
           </a>
@@ -1522,7 +1480,7 @@
     <!-- Contact Form Section -->
     <footer
       id="contactUs"
-      class="relative bg-black text-white rounded-t-[35px] md:rounded-t-[50px] pt-12 md:pt-16 lg:pt-20"
+      class="relative bg-black text-white rounded-t-[30px] md:rounded-t-[50px] pt-12 md:pt-16 lg:pt-20"
       data-aos="fade-up"
     >
       <div class="px-5 md:px-20">
@@ -1590,7 +1548,7 @@
                   </h3>
 
                   <form
-                    action="http://localhost:5500/api/submit-form"
+                    action="https://us-b.digitalmarkettap.com/api/submit-form"
                     method="POST"
                     class="space-y-4"
                     id="consultForm"
@@ -1657,13 +1615,13 @@
           </div>
           <div class="w-full lg:w-1/2">
             <div
-              class="bg-white text-black rounded-[40px] p-6 md:p-10 w-full max-w-lg ml-auto"
+              class="bg-white text-black rounded-[30px] md:rounded-[40px] p-6 md:p-10 w-full max-w-lg ml-auto"
             >
               <h3 class="text-xl md:text-[20px] font-bold mb-4">
                 Let’s Sit Down and Talk Strategy
               </h3>
               <form
-                action="http://localhost:5500/api/submit-form"
+                action="https://us-b.digitalmarkettap.com/api/submit-form"
                 method="POST"
                 class="space-y-4"
                 id="auditForm"
@@ -1696,7 +1654,7 @@
                   class="w-full px-3 py-2 rounded-xl border border-gray-300 focus:outline-none"
                 />
                 <select
-                  class="w-full px-3 py-2 rounded-xl border border-gray-300 text-sm text-gray-700 focus:outline-none"
+                  class="w-full px-3 py-2 rounded-xl border border-gray-300 text-md text-gray-700 focus:outline-none"
                   name="service"
                   required
                 >
@@ -1728,7 +1686,7 @@
 
                 <button
                   type="submit"
-                  class="w-full bg-[#f89e1b] text-white font-semibold py-2 rounded-[18px] hover:bg-[#000] transition"
+                  class="w-full bg-[#f89e1b] text-white font-semibold py-2 rounded-xl hover:bg-[#000] transition"
                 >
                   <span class="underline-animate">SEND REQUEST</span>
                 </button>
@@ -1738,7 +1696,7 @@
         </div>
       </div>
       <section
-        class="bg-black text-sm text-gray-700 py-4 px-5 md:px-20 mt-12 rounded-t-[20px] border-t-2 border-white-700"
+        class="bg-black text-sm text-gray-700 py-4 px-5 md:px-20 mt-12 rounded-t-[20px] border-t-4 border-[#f89e1b]"
       >
         <div
           class="flex flex-col md:flex-row justify-center items-center gap-4 text-white"
@@ -1881,7 +1839,7 @@
     <!-- JS FOR FORM VALIDATION -->
     <script>
       form.addEventListener("submit", async (e) => {
-        e.preventDefault(); // ✅ Required when using fetch
+        e.preventDefault();
 
         let hasError = false;
         const inputs = form.querySelectorAll("input, textarea");
@@ -1920,7 +1878,7 @@
         const data = Object.fromEntries(formData.entries());
 
         try {
-          const res = await fetch("http://localhost:5500/api/submit-form", {
+          const res = await fetch("submit", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -2032,24 +1990,45 @@
           .classList.remove("hidden");
         document.body.style.overflow = "hidden";
       }
+
       function closeFormWhatWeOffer() {
         document.getElementById("popupFormWhatWeOffer").classList.add("hidden");
         document.body.style.overflow = "auto";
       }
+
       document.addEventListener("DOMContentLoaded", () => {
         const phoneInput = document.getElementById("phoneWhatWeOffer");
+        const form = document.getElementById("serviceFormWhatWeOffer");
+
+        // Create and append inline error element
+        const errorEl = document.createElement("small");
+        errorEl.id = "phoneError";
+        errorEl.className = "text-red-500 text-xs hidden";
+        errorEl.innerText = "Phone number must be exactly 10 digits.";
+        phoneInput.insertAdjacentElement("afterend", errorEl);
+
+        // Restrict to digits and limit to 10 characters
         phoneInput.addEventListener("input", () => {
           phoneInput.value = phoneInput.value.replace(/\D/g, "");
           if (phoneInput.value.length > 10) {
             phoneInput.value = phoneInput.value.slice(0, 10);
           }
+
+          // Hide error if valid
+          if (phoneInput.value.length === 10) {
+            errorEl.classList.add("hidden");
+          }
         });
-        const form = document.getElementById("serviceFormWhatWeOffer");
-        form.addEventListener("submit", function (e) {
+
+        // Form submission validation
+        form.addEventListener("submit", (e) => {
           const phone = phoneInput.value;
           if (phone.length !== 10) {
-            alert("Phone number must be exactly 10 digits.");
-            e.preventDefault();
+            // e.preventDefault();
+            errorEl.classList.remove("hidden");
+            phoneInput.focus();
+          } else {
+            errorEl.classList.add("hidden");
           }
         });
       });
@@ -2173,6 +2152,39 @@
             mobileMenu.classList.add("hidden");
           }, 300);
         }
+      });
+    </script>
+
+    <!-- JS FOR SCROLLING DOT -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const processSection = document.getElementById("process");
+        const scrollLine = document.getElementById("scrollLine");
+        const scrollBall = document.getElementById("scrollBall");
+
+        function animateMobileTimeline() {
+          const sectionTop = processSection.offsetTop;
+          const sectionHeight = processSection.offsetHeight;
+          const scrollY = window.scrollY + window.innerHeight;
+
+          if (scrollY > sectionTop) {
+            const progress = Math.min(
+              (scrollY - sectionTop) / sectionHeight,
+              1
+            );
+            const maxHeight = sectionHeight;
+            const currentHeight = progress * maxHeight;
+
+            scrollLine.style.height = `${currentHeight}px`;
+            scrollBall.style.top = `${currentHeight - 8}px`;
+          } else {
+            scrollLine.style.height = "0px";
+            scrollBall.style.top = "0px";
+          }
+        }
+        window.addEventListener("scroll", animateMobileTimeline);
+        window.addEventListener("resize", animateMobileTimeline);
+        animateMobileTimeline();
       });
     </script>
   </body>
